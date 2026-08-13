@@ -26,7 +26,7 @@ var state: State = State.IDLE
 
 @export var move_speed: float = 70.0
 @export var detection_distance: float = 250.0
-@export var attack_distance: float = 50
+@export var attack_distance: float = 70
 
 
 # =========================================================
@@ -74,9 +74,9 @@ var is_dead: bool = false
 # NODES
 # =========================================================
 
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var attack_area: Area2D = $AttackArea
-
+@onready var sprite: AnimatedSprite2D = $BodyVisual/AnimatedSprite2D
+@onready var attack_area: Area2D = $BodyVisual/AttackArea
+@onready var body_visual: Node2D = $BodyVisual
 
 # =========================================================
 # READY
@@ -94,7 +94,7 @@ func _ready() -> void:
 # =========================================================
 # MAIN LOOP
 # =========================================================
-
+		
 func _physics_process(_delta: float) -> void:
 
 	if is_dead:
@@ -376,15 +376,10 @@ func die() -> void:
 # =========================================================
 
 func flip_enemy(direction: float) -> void:
-
 	if direction < 0:
-
-		sprite.flip_h = true
-
+		body_visual.scale.x = -1
 	elif direction > 0:
-
-		sprite.flip_h = false
-
+		body_visual.scale.x = 1
 
 # =========================================================
 # ANIMATION FINISHED

@@ -474,6 +474,4 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2130953974]
 position = Vector2(34, -28)
 sprite_frames = SubResource("SpriteFrames_j2inh")
-animation = &"Jump"
-frame = 5
-frame_progress = 1.0
+animation = &"Idle"

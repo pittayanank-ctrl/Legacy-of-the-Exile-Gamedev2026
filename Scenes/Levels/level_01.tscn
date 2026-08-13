@@ -57,7 +57,7 @@ tile_set = ExtResource("3_qelns")
 metadata/_edit_lock_ = true
 
 [node name="Enemy" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="0" unique_id=1240454980 instance=ExtResource("5_taws2")]
-position = Vector2(636, 406)
+position = Vector2(637.00006, 418)
 scale = Vector2(1.3325595, 1.9412035)
 
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="2" unique_id=1103718868]
