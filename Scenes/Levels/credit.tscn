@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://bajrtxxftc6wt"]
+
+[ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://Scenes/Prefabs/theme.tres" id="1_2g1tp"]
+[ext_resource type="Texture2D" uid="uid://1ay25i0wdihg" path="res://Assets/Icons/cpkku_dark.png" id="2_fnvqj"]
+[ext_resource type="FontFile" uid="uid://cavnbm5a08lt1" path="res://Assets/Fonts/Cinzel-Medium.ttf" id="3_4nn8d"]
+[ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://Scenes/Prefabs/button_exit.tscn" id="3_fnvqj"]
+[ext_resource type="Texture2D" uid="uid://ckxw8g8wltj44" path="res://Assets/BG/Ocean_5/1.png" id="5_wwdvx"]
+[ext_resource type="Texture2D" uid="uid://d0tl413mqi1od" path="res://Assets/BG/Ocean_5/2.png" id="6_nd6f0"]
+[ext_resource type="Texture2D" uid="uid://bhc0rbjlwn68" path="res://Assets/BG/Ocean_5/3.png" id="7_xg6id"]
+[ext_resource type="Texture2D" uid="uid://pkwmfu4rf8ng" path="res://Assets/BG/Ocean_5/4.png" id="8_ln4mr"]
+
+[node name="Node2D" type="Node2D" unique_id=264957255]
+
+[node name="Control" type="Control" parent="." unique_id=423201679]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 650.0
+
+[node name="CpkkuDark" type="Sprite2D" parent="Control" unique_id=813724852]
+position = Vector2(577, 118)
+texture = ExtResource("2_fnvqj")
+
+[node name="Title" type="Label" parent="Control" unique_id=1640205557]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -149.0
+offset_top = 295.0
+offset_right = 152.0
+offset_bottom = 328.0
+grow_horizontal = 2
+theme = ExtResource("1_2g1tp")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.6789437, 0.6789437, 0.6789437, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_4nn8d")
+theme_override_font_sizes/font_size = 24
+text = "Development Team"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title2" type="Label" parent="Control" unique_id=1645896659]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -209.0
+offset_top = 224.0
+offset_right = 211.0
+offset_bottom = 271.0
+grow_horizontal = 2
+theme = ExtResource("1_2g1tp")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_4nn8d")
+theme_override_font_sizes/font_size = 16
+text = "At College of Computing, Khon Kaen University
+By  Asst.Dr. Wachirawut Thamviset"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title3" type="Label" parent="Control" unique_id=1657901293]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_top = 176.0
+offset_right = 285.5
+offset_bottom = 209.0
+grow_horizontal = 2
+theme = ExtResource("1_2g1tp")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_4nn8d")
+theme_override_font_sizes/font_size = 24
+text = "Computer Game Development  Course 2026   "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title4" type="Label" parent="Control" unique_id=2127691335]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -107.0
+offset_top = 344.0
+offset_right = 200.5
+offset_bottom = 441.0
+grow_horizontal = 2
+theme = ExtResource("1_2g1tp")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_4nn8d")
+theme_override_font_sizes/font_size = 16
+text = "1. 673380319-1 ธนพล สุขเสริม
+2. 673380331-1 พิชชาอร ณ นครพนม
+3. 673380525-8 พิทยนันท์ กัญญะลา"
+vertical_alignment = 1
+
+[node name="btnExit" parent="Control" unique_id=1633606001 instance=ExtResource("3_fnvqj")]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 37.0
+offset_right = 249.0
+offset_bottom = 75.0
+
+[node name="BG" type="Node2D" parent="." unique_id=1557764132]
+z_index = -3
+
+[node name="Parallax2D" type="Parallax2D" parent="BG" unique_id=2069617807]
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(3, 0)
+repeat_times = 2
+
+[node name="1" type="Sprite2D" parent="BG/Parallax2D" unique_id=1064567113]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("5_wwdvx")
+
+[node name="Parallax2D2" type="Parallax2D" parent="BG" unique_id=1332087122]
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-7, 0)
+repeat_times = 2
+
+[node name="2" type="Sprite2D" parent="BG/Parallax2D2" unique_id=1616221233]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("6_nd6f0")
+
+[node name="Parallax2D3" type="Parallax2D" parent="BG" unique_id=425455692]
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 2
+
+[node name="3" type="Sprite2D" parent="BG/Parallax2D3" unique_id=1872774933]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("7_xg6id")
+
+[node name="Parallax2D4" type="Parallax2D" parent="BG" unique_id=1448375017]
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-20, 0)
+repeat_times = 2
+
+[node name="4" type="Sprite2D" parent="BG/Parallax2D4" unique_id=1183209151]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("8_ln4mr")
