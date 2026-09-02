@@ -194,10 +194,9 @@ position = Vector2(-7, -79)
 [node name="ColorRect" type="ColorRect" parent="." index="8" unique_id=183675234]
 offset_left = -783.0
 offset_top = 267.0
-offset_right = -580.0
+offset_right = -559.0
 offset_bottom = 383.0
 color = Color(0, 0, 0, 0.6509804)
-metadata/_edit_lock_ = true
 
 [node name="KeyboardLettersAndSymbols" type="Sprite2D" parent="ColorRect" index="0" unique_id=1290210466]
 position = Vector2(48, 24)
@@ -217,19 +216,19 @@ offset_left = 63.0
 offset_top = 12.0
 offset_right = 175.0
 offset_bottom = 35.0
-text = "เพื่อเดินซ้ายขวา"
+text = "MOVE LEFT RIGHT"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="ColorRect" index="3" unique_id=1193547564]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.19827586
-anchor_bottom = 0.19827586
+anchor_top = 0.22413793
+anchor_bottom = 0.22413793
 offset_left = 63.0
 offset_top = 12.0
 offset_right = 175.0
 offset_bottom = 35.0
-text = "โจมตี"
+text = "ATTACK"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="ColorRect" index="4" unique_id=1151966771]
@@ -241,7 +240,7 @@ offset_left = 63.0
 offset_top = 12.0
 offset_right = 175.0
 offset_bottom = 35.0
-text = "ป้องกัน"
+text = "DEFEND"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label4" type="Label" parent="ColorRect" index="5" unique_id=1480370072]
@@ -253,7 +252,7 @@ offset_left = 63.0
 offset_top = 12.0
 offset_right = 175.0
 offset_bottom = 35.0
-text = "วิ่ง"
+text = "RUN"
 metadata/_edit_use_anchors_ = true
 
 [node name="FullKeyboardMouseTileset" type="Sprite2D" parent="ColorRect" index="6" unique_id=1701387597]

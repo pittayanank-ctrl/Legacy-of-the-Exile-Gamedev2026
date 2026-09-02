@@ -69,12 +69,12 @@ autowrap_mode = 3
 
 [node name="ContinueLabel" type="Label" parent="Panel/VBoxContainer" unique_id=907230419]
 layout_mode = 2
-text = "[E] พูดต่อ"
+text = "[E] TALK"
 horizontal_alignment = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/VBoxContainer" unique_id=1970722440]
 texture_filter = 1
-position = Vector2(966, 67.00001)
+position = Vector2(966, 63.000008)
 scale = Vector2(1.5661777, 1.5000007)
 sprite_frames = SubResource("SpriteFrames_n208v")
 frame = 2
