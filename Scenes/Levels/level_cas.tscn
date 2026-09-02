@@ -47,14 +47,15 @@ metadata/_custom_type_script = "uid://dgimd832oimtc"
 [sub_resource type="Resource" id="Resource_8kjy3"]
 script = ExtResource("5_bnwiu")
 speaker_name = "King Alaric III"
-dialogue_text = "To see Aldric once more, is it?"
+dialogue_text = "So... the last exile has finally returned."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_aioe2"]
 script = ExtResource("5_bnwiu")
 speaker_name = "Edric Vale"
-dialogue_text = "Yes. It is time everyone spoke the truth at last."
+dialogue_text = "Tell me the truth."
+speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_bnwiu"]

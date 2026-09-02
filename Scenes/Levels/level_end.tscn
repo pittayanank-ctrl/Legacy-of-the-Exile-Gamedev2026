@@ -1,24 +1,57 @@
 [gd_scene format=3 uid="uid://0hik0l1tkpxp"]
 
-[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_x7w4j"]
+[ext_resource type="PackedScene" uid="uid://bwdbbye78ecl1" path="res://Scenes/Levels/level_start1.tscn" id="1_shmvr"]
 [ext_resource type="Texture2D" uid="uid://b7np4pbeagd8k" path="res://Assets/NPC/King.png" id="2_a1ctn"]
-[ext_resource type="PackedScene" uid="uid://bydbpqt3654kp" path="res://Scenes/Actors/GameCamera.tscn" id="3_n5jy4"]
-[ext_resource type="Texture2D" uid="uid://ch654vxsx2nkn" path="res://Assets/Tile/tilee.png" id="4_ewk7j"]
-[ext_resource type="Texture2D" uid="uid://hfdtmcja4sw3" path="res://Assets/BG/nature_4/1.png" id="5_jwlcv"]
-[ext_resource type="Texture2D" uid="uid://brtwu41psu5o2" path="res://Assets/BG/nature_4/2.png" id="6_oef4l"]
-[ext_resource type="Texture2D" uid="uid://ckcnjonvqso6s" path="res://Assets/BG/nature_4/3.png" id="7_lryru"]
-[ext_resource type="Texture2D" uid="uid://cdrlwb830yf0l" path="res://Assets/BG/nature_4/4.png" id="8_ekvg5"]
 [ext_resource type="PackedScene" uid="uid://dhvmfd7ogyqld" path="res://Scenes/Actors/NPC.tscn" id="9_go1ur"]
-[ext_resource type="Texture2D" uid="uid://syri776v2etj" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="10_i2uy6"]
+[ext_resource type="Texture2D" uid="uid://lc7j3q0snxct" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="10_i2uy6"]
 [ext_resource type="Script" uid="uid://dgimd832oimtc" path="res://Scenes/Prefabs/DialogueGroup.gd" id="11_7e27o"]
 [ext_resource type="Script" uid="uid://cdhi2dfrqh1wr" path="res://Scenes/Prefabs/DialogueLine.gd" id="12_culcw"]
 [ext_resource type="Texture2D" uid="uid://dx2r3mf23no60" path="res://Assets/Player/heropic.psd.png" id="13_uoe4u"]
-[ext_resource type="Texture2D" uid="uid://b26e6v2hc40mj" path="res://Assets/NPC/c7cbec1d-b18e-44ce-8286-4f7bc5b0d889left.png" id="14_ewk7j"]
 [ext_resource type="Texture2D" uid="uid://ld0hsl0yy4kk" path="res://Assets/NPC/c7cbec1d-b18e-44ce-8286-4f7bc5b0d889.png" id="14_fpfjg"]
 [ext_resource type="PackedScene" uid="uid://cu4uhigoujqbu" path="res://Scenes/Prefabs/DialogueUI.tscn" id="15_ix6dm"]
 [ext_resource type="Texture2D" uid="uid://c4evaknq3tc2d" path="res://Assets/NPC/image-Photoroom.png" id="15_jwlcv"]
 [ext_resource type="FontFile" uid="uid://cavnbm5a08lt1" path="res://Assets/Fonts/Cinzel-Medium.ttf" id="16_njhok"]
-[ext_resource type="Texture2D" uid="uid://bvxhepw83ox6o" path="res://Assets/BG/tilestarat.png" id="18_2be47"]
+
+[sub_resource type="Resource" id="Resource_n5jy4"]
+script = ExtResource("12_culcw")
+speaker_name = "Edric"
+dialogue_text = "Then I'll uncover the truth."
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_x7w4j"]
+script = ExtResource("11_7e27o")
+left_portrait = ExtResource("13_uoe4u")
+right_portrait = ExtResource("15_jwlcv")
+dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_n5jy4")])
+metadata/_custom_type_script = "uid://dgimd832oimtc"
+
+[sub_resource type="Resource" id="Resource_8kjy3"]
+script = ExtResource("12_culcw")
+speaker_name = "King Alaric III"
+dialogue_text = "So... the last exile has finally returned."
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_aioe2"]
+script = ExtResource("12_culcw")
+speaker_name = "Edric Vale"
+dialogue_text = "Tell me the truth."
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_resxt"]
+script = ExtResource("12_culcw")
+speaker_name = "King Alaric III"
+dialogue_text = "Very well. You deserve to know what happened to your family."
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_rlym6"]
+script = ExtResource("11_7e27o")
+left_portrait = ExtResource("13_uoe4u")
+right_portrait = ExtResource("15_jwlcv")
+dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_8kjy3"), SubResource("Resource_aioe2"), SubResource("Resource_resxt")])
+metadata/_custom_type_script = "uid://dgimd832oimtc"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgvqw"]
 atlas = ExtResource("2_a1ctn")
@@ -44,7 +77,7 @@ region = Rect2(155, 0, 155, 155)
 atlas = ExtResource("2_a1ctn")
 region = Rect2(0, 0, 155, 155)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_11rhl"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_83o4b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -90,7 +123,7 @@ region = Rect2(640, 9, 80, 64)
 atlas = ExtResource("10_i2uy6")
 region = Rect2(720, 9, 80, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_w7vtg"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_fuhk3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -113,265 +146,112 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Resource" id="Resource_n5jy4"]
+[sub_resource type="Resource" id="Resource_0n1sq"]
 script = ExtResource("12_culcw")
-speaker_name = "King Alaric III"
-dialogue_text = "At last... I stand face-to-face with you once more."
+speaker_name = "Aldric"
+dialogue_text = "My son... you've come so far."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
-[sub_resource type="Resource" id="Resource_ewk7j"]
+[sub_resource type="Resource" id="Resource_wnmma"]
 script = ExtResource("12_culcw")
-speaker_name = "Aldric Vale"
-dialogue_text = "I never thought I would live to see the day you stood here again."
+speaker_name = "Edric"
+dialogue_text = "Father, it's finally over."
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_jdvpf"]
+script = ExtResource("12_culcw")
+speaker_name = "Aldric"
+dialogue_text = "No. It has only begun."
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_bfldo"]
+script = ExtResource("12_culcw")
+speaker_name = "Edric"
+dialogue_text = "What are you saying?"
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_j36te"]
 script = ExtResource("11_7e27o")
-left_portrait = ExtResource("14_ewk7j")
+left_portrait = ExtResource("13_uoe4u")
 right_portrait = ExtResource("15_jwlcv")
-dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_n5jy4"), SubResource("Resource_ewk7j")])
+dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_0n1sq"), SubResource("Resource_wnmma"), SubResource("Resource_jdvpf"), SubResource("Resource_bfldo")])
 metadata/_custom_type_script = "uid://dgimd832oimtc"
 
-[sub_resource type="Resource" id="Resource_oef4l"]
+[sub_resource type="Resource" id="Resource_6ewm5"]
 script = ExtResource("12_culcw")
-speaker_name = "Edric Vale"
-dialogue_text = "Father... did the two of you know each other?"
+speaker_name = "Aldric"
+dialogue_text = "Go to the King. He knows why our family was cast into exile."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
-[sub_resource type="Resource" id="Resource_lryru"]
+[sub_resource type="Resource" id="Resource_2srfm"]
 script = ExtResource("12_culcw")
-speaker_name = "Aldric Vale"
-dialogue_text = "Yes... he was the one I once swore to protect. But everything crumbled because of those power-hungry knights."
+speaker_name = "Edric"
+dialogue_text = "Then I'll uncover the truth."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
-[sub_resource type="Resource" id="Resource_jwlcv"]
+[sub_resource type="Resource" id="Resource_it00s"]
 script = ExtResource("11_7e27o")
 left_portrait = ExtResource("13_uoe4u")
 right_portrait = ExtResource("14_fpfjg")
-dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_oef4l"), SubResource("Resource_lryru")])
+dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_6ewm5"), SubResource("Resource_2srfm")])
 metadata/_custom_type_script = "uid://dgimd832oimtc"
 
-[sub_resource type="Resource" id="Resource_11rhl"]
-script = ExtResource("12_culcw")
-speaker_name = "King Alaric III"
-dialogue_text = "I lost an entire kingdom... and I truly believed you had perished."
-speaker_side = 1
-metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_shmvr")]
 
-[sub_resource type="Resource" id="Resource_ekvg5"]
-script = ExtResource("12_culcw")
-speaker_name = "Aldric Vale"
-dialogue_text = "I fled to protect my child, and kept the whole truth to myself."
-metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+[node name="Npc" parent="." index="11" unique_id=522633972]
+position = Vector2(-74.00001, 718)
+npc_sprite_frames = null
+dialogue_groups = Array[ExtResource("11_7e27o")]([])
 
-[sub_resource type="Resource" id="Resource_w7vtg"]
-script = ExtResource("11_7e27o")
-left_portrait = ExtResource("14_ewk7j")
-right_portrait = ExtResource("15_jwlcv")
-dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_11rhl"), SubResource("Resource_ekvg5")])
-metadata/_custom_type_script = "uid://dgimd832oimtc"
+[node name="LevelFinishDoor2" parent="." index="16" unique_id=1136132539]
+position = Vector2(1290, 138)
 
-[sub_resource type="Resource" id="Resource_i2uy6"]
-script = ExtResource("12_culcw")
-speaker_name = "Edric Vale"
-dialogue_text = "All this time... I thought I was fighting to avenge you."
-metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+[node name="Npc2" parent="." index="17" unique_id=1058706694 instance=ExtResource("9_go1ur")]
+position = Vector2(70, 417)
+scale = Vector2(2.6814895, 2.8707922)
+dialogue_groups = Array[ExtResource("11_7e27o")]([SubResource("Resource_x7w4j")])
+final_dialogue = SubResource("Resource_rlym6")
+change_scene_after_dialogue = true
+next_scene = "uid://chtk23yxypu2t"
 
-[sub_resource type="Resource" id="Resource_7e27o"]
-script = ExtResource("12_culcw")
-speaker_name = "Aldric Vale"
-dialogue_text = "And now, you have done it."
-speaker_side = 1
-metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
-
-[sub_resource type="Resource" id="Resource_culcw"]
-script = ExtResource("12_culcw")
-speaker_name = "Edric Vale"
-dialogue_text = "But I've only just realized... vengeance won't bring back what was lost."
-metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
-
-[sub_resource type="Resource" id="Resource_go1ur"]
-script = ExtResource("11_7e27o")
-left_portrait = ExtResource("13_uoe4u")
-right_portrait = ExtResource("14_fpfjg")
-dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_i2uy6"), SubResource("Resource_7e27o"), SubResource("Resource_culcw")])
-metadata/_custom_type_script = "uid://dgimd832oimtc"
-
-[sub_resource type="Resource" id="Resource_fpfjg"]
-script = ExtResource("12_culcw")
-speaker_name = "King Alaric III"
-dialogue_text = "Then lay down your sword."
-speaker_side = 1
-metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
-
-[sub_resource type="Resource" id="Resource_ix6dm"]
-script = ExtResource("12_culcw")
-speaker_name = "Aldric Vale"
-dialogue_text = "The vengeance is over, my son."
-metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
-
-[sub_resource type="Resource" id="Resource_uoe4u"]
-script = ExtResource("11_7e27o")
-left_portrait = ExtResource("14_ewk7j")
-right_portrait = ExtResource("15_jwlcv")
-dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_fpfjg"), SubResource("Resource_ix6dm")])
-metadata/_custom_type_script = "uid://dgimd832oimtc"
-
-[sub_resource type="Resource" id="Resource_xspei"]
-script = ExtResource("12_culcw")
-speaker_name = "Edric Vale"
-dialogue_text = "So... from now on, we can start anew, can't we?"
-metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
-
-[sub_resource type="Resource" id="Resource_2be47"]
-script = ExtResource("12_culcw")
-speaker_name = "Aldric Vale"
-dialogue_text = "Yes, my son... let us finally go home."
-speaker_side = 1
-metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
-
-[sub_resource type="Resource" id="Resource_njhok"]
-script = ExtResource("11_7e27o")
-left_portrait = ExtResource("13_uoe4u")
-right_portrait = ExtResource("14_fpfjg")
-dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_xspei"), SubResource("Resource_2be47")])
-metadata/_custom_type_script = "uid://dgimd832oimtc"
-
-[sub_resource type="Resource" id="Resource_ovfk7"]
-script = ExtResource("12_culcw")
-speaker_name = "King Alaric III"
-dialogue_text = "After today, no one has to run from the past ever again."
-speaker_side = 1
-metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
-
-[sub_resource type="Resource" id="Resource_lq785"]
-script = ExtResource("11_7e27o")
-left_portrait = ExtResource("13_uoe4u")
-right_portrait = ExtResource("15_jwlcv")
-dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_ovfk7")])
-metadata/_custom_type_script = "uid://dgimd832oimtc"
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_06h4u"]
-animations = [{
-"frames": [],
-"loop": 1,
-"name": &"default",
-"speed": 60.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahpba"]
-size = Vector2(33, 409)
-
-[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_x7w4j")]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=378540050]
-z_index = 1
-position = Vector2(-6, 425)
-scale = Vector2(0.91935486, 0.7709677)
-sprite_frames = SubResource("SpriteFrames_11rhl")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Npc2" index="4" unique_id=22783112]
+position = Vector2(-3.3563433, 2.7866926)
+scale = Vector2(0.39681447, 0.3097164)
+sprite_frames = SubResource("SpriteFrames_83o4b")
 autoplay = "default"
 
-[node name="Label" type="Label" parent="Level/AnimatedSprite2D" index="0" unique_id=1270122014]
+[node name="Label2" type="Label" parent="Npc2" index="5" unique_id=366290154]
 texture_filter = 6
-offset_left = -35.894733
-offset_top = -68.74478
-offset_right = 271.10526
-offset_bottom = -13.7447815
-scale = Vector2(0.4, 0.4)
+offset_left = -14.917084
+offset_top = -15.675122
+offset_right = 302.08292
+offset_bottom = 39.32488
+scale = Vector2(0.1, 0.1)
 theme_override_fonts/font = ExtResource("16_njhok")
 theme_override_font_sizes/font_size = 40
-text = "King Alaric III"
+text = "King Alaric III "
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Player" parent="." index="2" unique_id=850213228]
-position = Vector2(-691.00006, 427)
-
-[node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("3_n5jy4")]
-limit_right = 870
-
-<<<<<<< HEAD
-[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
-stream = null
-=======
-[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
-text = "The Exile's Home"
->>>>>>> f708e2897fb49a3001eec8daa7520868394c9bad
-
-[node name="Tilee" type="Sprite2D" parent="." index="8" unique_id=658583738]
-texture_filter = 2
-position = Vector2(0, 488)
-scale = Vector2(1.0558772, 1)
-texture = ExtResource("4_ewk7j")
-
-[node name="Para" type="Node2D" parent="." index="9" unique_id=1613966255]
-position = Vector2(1088, 16)
-
-[node name="Parallax2D" type="Parallax2D" parent="Para" index="0" unique_id=726656290]
-scroll_scale = Vector2(0.3, 0)
-repeat_size = Vector2(1114.85, 0)
-repeat_times = 2
-
-[node name="1" type="Sprite2D" parent="Para/Parallax2D" index="0" unique_id=2011173872]
-z_index = -1
-position = Vector2(-346.45166, 226.2668)
-scale = Vector2(1.9359317, 1.5448568)
-texture = ExtResource("5_jwlcv")
-
-[node name="Parallax2D2" type="Parallax2D" parent="Para" index="1" unique_id=1774183053]
-scroll_scale = Vector2(0, 0)
-repeat_size = Vector2(1114.85, 0)
-autoscroll = Vector2(-10, 0)
-repeat_times = 2
-
-[node name="2" type="Sprite2D" parent="Para/Parallax2D2" index="0" unique_id=1718062850]
-z_index = -1
-position = Vector2(-346.45166, 226.2668)
-scale = Vector2(1.9359317, 1.5448568)
-texture = ExtResource("6_oef4l")
-
-[node name="Parallax2D3" type="Parallax2D" parent="Para" index="2" unique_id=14816209]
-scroll_scale = Vector2(0.3, 0)
-repeat_size = Vector2(1114.85, 0)
-repeat_times = 2
-
-[node name="3" type="Sprite2D" parent="Para/Parallax2D3" index="0" unique_id=1707082041]
-z_index = -1
-position = Vector2(-346.45166, 226.2668)
-scale = Vector2(1.9359317, 1.5448568)
-texture = ExtResource("7_lryru")
-
-[node name="Parallax2D4" type="Parallax2D" parent="Para" index="3" unique_id=498598950]
-scroll_scale = Vector2(0.3, 0)
-repeat_size = Vector2(1114.85, 0)
-repeat_times = 2
-
-[node name="4" type="Sprite2D" parent="Para/Parallax2D4" index="0" unique_id=1993013874]
-z_index = -1
-position = Vector2(-346.45166, 226.2668)
-scale = Vector2(1.9359317, 1.5448568)
-texture = ExtResource("8_ekvg5")
-
-[node name="Npc" parent="." index="10" unique_id=522633972 instance=ExtResource("9_go1ur")]
+[node name="Npc3" parent="." index="18" unique_id=211733659 instance=ExtResource("9_go1ur")]
 z_index = 2
 texture_filter = 1
-position = Vector2(-80, 424.00003)
+position = Vector2(-79, 425.00003)
 scale = Vector2(3.111848, 3.0764527)
 collision_layer = 0
 collision_mask = 7
 npc_name = "Father"
-npc_sprite_frames = SubResource("SpriteFrames_w7vtg")
+npc_sprite_frames = SubResource("SpriteFrames_fuhk3")
 npc_scale = 1.5
-dialogue_groups = Array[ExtResource("11_7e27o")]([SubResource("Resource_j36te"), SubResource("Resource_jwlcv"), SubResource("Resource_w7vtg"), SubResource("Resource_go1ur"), SubResource("Resource_uoe4u"), SubResource("Resource_njhok")])
-final_dialogue = SubResource("Resource_lq785")
-change_scene_after_dialogue = true
-next_scene = "uid://chtk23yxypu2t"
+dialogue_groups = Array[ExtResource("11_7e27o")]([SubResource("Resource_j36te")])
+final_dialogue = SubResource("Resource_it00s")
 
-[node name="DialogueUi" parent="Npc" index="2" unique_id=1955745153 instance=ExtResource("15_ix6dm")]
+[node name="DialogueUi" parent="Npc3" index="2" unique_id=1955745153 instance=ExtResource("15_ix6dm")]
 
-[node name="Label" type="Label" parent="Npc" index="5" unique_id=1127056306]
+[node name="Label" type="Label" parent="Npc3" index="5" unique_id=1395513020]
 texture_filter = 6
 offset_left = -12.854097
 offset_top = -15.602398
@@ -382,42 +262,4 @@ theme_override_fonts/font = ExtResource("16_njhok")
 theme_override_font_sizes/font_size = 40
 text = "Aldric Vale"
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="11" unique_id=1616378644]
-position = Vector2(-800, -112)
-sprite_frames = SubResource("SpriteFrames_06h4u")
-autoplay = "default"
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." index="12" unique_id=1367176693]
-position = Vector2(-1804, -2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" index="0" unique_id=659622584]
-position = Vector2(896, 328)
-shape = SubResource("RectangleShape2D_ahpba")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" index="1" unique_id=313771868]
-position = Vector2(2692, 330)
-shape = SubResource("RectangleShape2D_ahpba")
-
-[node name="Panel" type="Panel" parent="." index="13" unique_id=582340405]
-offset_left = -1096.0
-offset_top = -335.99994
-offset_right = -1056.0
-offset_bottom = -295.99994
-metadata/_edit_use_anchors_ = true
-
-[node name="Tilestarat" type="Sprite2D" parent="." index="14" unique_id=2078825973]
-texture_filter = 1
-position = Vector2(-7, 316)
-texture = ExtResource("18_2be47")
-metadata/_edit_lock_ = true
-
-[node name="ColorRect" type="ColorRect" parent="." index="15" unique_id=1526208280]
-z_index = -4
-offset_left = -928.0
-offset_top = 544.0
-offset_right = 904.0
-offset_bottom = 616.0
-color = Color(0.07428471, 0.067409925, 0.06282619, 1)
 metadata/_edit_use_anchors_ = true
