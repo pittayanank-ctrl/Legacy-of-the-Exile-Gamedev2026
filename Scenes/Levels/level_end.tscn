@@ -19,6 +19,8 @@
 [ext_resource type="FontFile" uid="uid://cavnbm5a08lt1" path="res://Assets/Fonts/Cinzel-Medium.ttf" id="16_njhok"]
 [ext_resource type="Texture2D" uid="uid://bvxhepw83ox6o" path="res://Assets/BG/tilestarat.png" id="18_2be47"]
 [ext_resource type="PackedScene" uid="uid://ddf4ivwyrexi4" path="res://Scenes/Levels/level_village1.tscn" id="19_ewk7j"]
+[ext_resource type="Texture2D" uid="uid://c4evaknq3tc2d" path="res://Assets/NPC/image-Photoroom.png" id="20_jwlcv"]
+[ext_resource type="Texture2D" uid="uid://b7np4pbeagd8k" path="res://Assets/NPC/King.png" id="21_oef4l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3c76j"]
 atlas = ExtResource("10_i2uy6")
@@ -89,30 +91,57 @@ speaker_name = "Edric"
 dialogue_text = "What are you saying?"
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
-[sub_resource type="Resource" id="Resource_j36te"]
-script = ExtResource("11_7e27o")
-left_portrait = ExtResource("13_uoe4u")
-right_portrait = ExtResource("14_fpfjg")
-dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_0n1sq"), SubResource("Resource_wnmma"), SubResource("Resource_jdvpf"), SubResource("Resource_bfldo")])
-metadata/_custom_type_script = "uid://dgimd832oimtc"
-
-[sub_resource type="Resource" id="Resource_6ewm5"]
+[sub_resource type="Resource" id="Resource_ewk7j"]
 script = ExtResource("12_culcw")
 speaker_name = "Aldric"
 dialogue_text = "Go to the King. He knows why our family was cast into exile."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
-[sub_resource type="Resource" id="Resource_2srfm"]
+[sub_resource type="Resource" id="Resource_jwlcv"]
 script = ExtResource("12_culcw")
 speaker_name = "Edric"
 dialogue_text = "Then I'll uncover the truth."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
-[sub_resource type="Resource" id="Resource_oef4l"]
+[sub_resource type="Resource" id="Resource_j36te"]
 script = ExtResource("11_7e27o")
 left_portrait = ExtResource("13_uoe4u")
 right_portrait = ExtResource("14_fpfjg")
+dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_0n1sq"), SubResource("Resource_wnmma"), SubResource("Resource_jdvpf"), SubResource("Resource_bfldo"), SubResource("Resource_ewk7j"), SubResource("Resource_jwlcv")])
+metadata/_custom_type_script = "uid://dgimd832oimtc"
+
+[sub_resource type="Resource" id="Resource_oef4l"]
+script = ExtResource("12_culcw")
+speaker_name = "King Alaric III"
+dialogue_text = "So... the last exile has finally returned."
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_lryru"]
+script = ExtResource("11_7e27o")
+left_portrait = ExtResource("13_uoe4u")
+right_portrait = ExtResource("20_jwlcv")
+dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_oef4l")])
+metadata/_custom_type_script = "uid://dgimd832oimtc"
+
+[sub_resource type="Resource" id="Resource_6ewm5"]
+script = ExtResource("12_culcw")
+speaker_name = "Edric"
+dialogue_text = "Tell me the truth."
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_2srfm"]
+script = ExtResource("12_culcw")
+speaker_name = "King Alaric III "
+dialogue_text = "Very well. You deserve to know what happened to your family."
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_ekvg5"]
+script = ExtResource("11_7e27o")
+left_portrait = ExtResource("13_uoe4u")
+right_portrait = ExtResource("20_jwlcv")
 dialogue_lines = Array[ExtResource("12_culcw")]([SubResource("Resource_6ewm5"), SubResource("Resource_2srfm")])
 metadata/_custom_type_script = "uid://dgimd832oimtc"
 
@@ -161,6 +190,56 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgvqw"]
+atlas = ExtResource("21_oef4l")
+region = Rect2(775, 0, 155, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh1ak"]
+atlas = ExtResource("21_oef4l")
+region = Rect2(620, 0, 155, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf0wp"]
+atlas = ExtResource("21_oef4l")
+region = Rect2(465, 0, 155, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smdyq"]
+atlas = ExtResource("21_oef4l")
+region = Rect2(310, 0, 155, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hthrd"]
+atlas = ExtResource("21_oef4l")
+region = Rect2(155, 0, 155, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnwiu"]
+atlas = ExtResource("21_oef4l")
+region = Rect2(0, 0, 155, 155)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ekvg5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgvqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh1ak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yf0wp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smdyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hthrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnwiu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
 }]
 
 [node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_x7w4j")]
@@ -246,8 +325,10 @@ collision_mask = 7
 npc_name = "Father"
 npc_sprite_frames = SubResource("SpriteFrames_jwlcv")
 npc_scale = 1.5
-dialogue_groups = Array[ExtResource("11_7e27o")]([SubResource("Resource_j36te")])
-final_dialogue = SubResource("Resource_oef4l")
+dialogue_groups = Array[ExtResource("11_7e27o")]([SubResource("Resource_j36te"), SubResource("Resource_lryru")])
+final_dialogue = SubResource("Resource_ekvg5")
+change_scene_after_dialogue = true
+next_scene = "uid://chtk23yxypu2t"
 
 [node name="DialogueUi" parent="Npc" index="2" unique_id=1955745153 instance=ExtResource("15_ix6dm")]
 
@@ -318,3 +399,27 @@ z_index = 1
 position = Vector2(922.99994, 48)
 scale = Vector2(2.2863064, 14.454411)
 next_scene = ExtResource("19_ewk7j")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." index="17" unique_id=270047565]
+position = Vector2(7, 430)
+scale = Vector2(0.8623724, 0.73564655)
+sprite_frames = SubResource("SpriteFrames_ekvg5")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="AnimatedSprite2D2" index="0" unique_id=225442522]
+texture_filter = 6
+anchors_preset = -1
+anchor_left = -0.02766699
+anchor_top = -0.004579458
+anchor_right = 0.52567255
+anchor_bottom = -0.029119479
+offset_left = -53.691208
+offset_top = -59.1015
+offset_right = 1209.5411
+offset_bottom = 174.70221
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("16_njhok")
+theme_override_font_sizes/font_size = 152
+text = "King Alaric III "
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
