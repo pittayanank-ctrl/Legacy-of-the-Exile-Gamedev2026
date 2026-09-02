@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://ccmytbksydnqb"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_igaql"]
+[ext_resource type="Texture2D" uid="uid://c885avlem10am" path="res://Assets/BG/castle2.png" id="2_irj78"]
+[ext_resource type="PackedScene" uid="uid://bydbpqt3654kp" path="res://Scenes/Actors/GameCamera.tscn" id="3_h3ujt"]
+[ext_resource type="Texture2D" uid="uid://b7np4pbeagd8k" path="res://Assets/NPC/King.png" id="4_gh1ak"]
+[ext_resource type="Script" uid="uid://dgimd832oimtc" path="res://Scenes/Prefabs/DialogueGroup.gd" id="4_hthrd"]
+[ext_resource type="PackedScene" uid="uid://dhvmfd7ogyqld" path="res://Scenes/Actors/NPC.tscn" id="4_jgvqw"]
+[ext_resource type="Script" uid="uid://cdhi2dfrqh1wr" path="res://Scenes/Prefabs/DialogueLine.gd" id="5_bnwiu"]
+[ext_resource type="PackedScene" uid="uid://c8c8agwdreq8" path="res://Scenes/Actors/enemycastle2.tscn" id="5_h3ujt"]
+[ext_resource type="Texture2D" uid="uid://dx2r3mf23no60" path="res://Assets/Player/heropic.psd.png" id="6_8kjy3"]
+[ext_resource type="Texture2D" uid="uid://c4evaknq3tc2d" path="res://Assets/NPC/image-Photoroom.png" id="7_aioe2"]
+
+[sub_resource type="Resource" id="Resource_gh1ak"]
+script = ExtResource("5_bnwiu")
+speaker_name = "King Alaric III"
+dialogue_text = "ขอบใจเจ้ามาก... หากไม่ได้เจ้า ข้าคงไม่มีวันได้กลับมา"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_yf0wp"]
+script = ExtResource("5_bnwiu")
+speaker_name = "Edric Vale"
+dialogue_text = "ยังมีเรื่องที่ข้าต้องรู้... เรื่องอดีตของครอบครัวข้า"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_smdyq"]
+script = ExtResource("5_bnwiu")
+speaker_name = "King Alaric III"
+dialogue_text = "ข้ารู้ว่าเจ้าต้องการคำตอบ และข้าจะบอกทุกอย่าง"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_hthrd"]
+script = ExtResource("5_bnwiu")
+speaker_name = "Edric Vale"
+dialogue_text = "เช่นนั้น... กลับไปกับข้าเถอะ"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_jgvqw"]
+script = ExtResource("4_hthrd")
+left_portrait = ExtResource("6_8kjy3")
+right_portrait = ExtResource("7_aioe2")
+dialogue_lines = Array[ExtResource("5_bnwiu")]([SubResource("Resource_gh1ak"), SubResource("Resource_yf0wp"), SubResource("Resource_smdyq"), SubResource("Resource_hthrd")])
+metadata/_custom_type_script = "uid://dgimd832oimtc"
+
+[sub_resource type="Resource" id="Resource_8kjy3"]
+script = ExtResource("5_bnwiu")
+speaker_name = "King Alaric III"
+dialogue_text = "ไปหาพ่อของเจ้าสินะ"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_aioe2"]
+script = ExtResource("5_bnwiu")
+speaker_name = "Edric Vale"
+dialogue_text = "ใช่ ถึงเวลาที่ทุกคนจะต้องพูดความจริงเสียที"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_bnwiu"]
+script = ExtResource("4_hthrd")
+left_portrait = ExtResource("6_8kjy3")
+right_portrait = ExtResource("7_aioe2")
+dialogue_lines = Array[ExtResource("5_bnwiu")]([SubResource("Resource_8kjy3"), SubResource("Resource_aioe2")])
+metadata/_custom_type_script = "uid://dgimd832oimtc"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgvqw"]
+atlas = ExtResource("4_gh1ak")
+region = Rect2(775, 0, 155, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh1ak"]
+atlas = ExtResource("4_gh1ak")
+region = Rect2(620, 0, 155, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf0wp"]
+atlas = ExtResource("4_gh1ak")
+region = Rect2(465, 0, 155, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smdyq"]
+atlas = ExtResource("4_gh1ak")
+region = Rect2(310, 0, 155, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hthrd"]
+atlas = ExtResource("4_gh1ak")
+region = Rect2(155, 0, 155, 155)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnwiu"]
+atlas = ExtResource("4_gh1ak")
+region = Rect2(0, 0, 155, 155)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j2inh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgvqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh1ak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yf0wp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smdyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hthrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnwiu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_igaql")]
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1543.0001, -15.000001)
+scale = Vector2(4.0154576, 18.682032)
+
+[node name="Background2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="1" unique_id=1070008654]
+repeat_size = Vector2(1573.005, 0)
+
+[node name="Castle2" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1462459246]
+position = Vector2(469, 345)
+scale = Vector2(0.8555818, 0.785253)
+texture = ExtResource("2_irj78")
+
+[node name="Panel" type="Panel" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=58538133]
+offset_left = -725.0
+offset_top = -267.0
+offset_right = -685.0
+offset_bottom = -227.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Npc" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=522633972 instance=ExtResource("4_jgvqw")]
+position = Vector2(891, 462)
+scale = Vector2(2.2557054, 2.4709768)
+dialogue_groups = Array[ExtResource("4_hthrd")]([SubResource("Resource_jgvqw")])
+final_dialogue = SubResource("Resource_bnwiu")
+change_scene_after_dialogue = true
+next_scene = "uid://0hik0l1tkpxp"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level/Npc" index="4" unique_id=1851947018]
+position = Vector2(-3.9898815, 0.40469265)
+scale = Vector2(0.45, 0.35)
+sprite_frames = SubResource("SpriteFrames_j2inh")
+autoplay = "default"
+frame_progress = 0.6820328
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(-143.00002, 458)
+
+[node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("3_h3ujt")]
+offset = Vector2(0, -120)
+zoom = Vector2(1.4, 1.1)
+limit_left = -246
+limit_top = -10000003
+limit_right = 1170
+limit_bottom = 9999997
+position_smoothing_enabled = true
+normal_zoom = Vector2(1.3, 1.3)
+
+[node name="Enemy" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="0" unique_id=1240454980 instance=ExtResource("5_h3ujt")]
+position = Vector2(187, 458.00003)
+scale = Vector2(2.224081, 2.3218932)

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://b0ufvbwfu0xsb" path="res://Scenes/Prefabs/button_exit.gd" id="2_cooxc"]
 [ext_resource type="Texture2D" uid="uid://c36dtie544inx" path="res://Assets/UI/btnuimenuoff.png" id="3_yqtut"]
 [ext_resource type="Texture2D" uid="uid://fkstuagn1p12" path="res://Assets/UI/btnmenuon.png" id="4_16378"]
+[ext_resource type="AudioStream" uid="uid://pjii4o1efkmj" path="res://Assets/Sound/item_equip.wav" id="6_u0bg4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j2inh"]
 
@@ -44,5 +45,8 @@ position = Vector2(85, 20)
 scale = Vector2(0.1945572, 0.3)
 sprite_frames = SubResource("SpriteFrames_u0bg4")
 animation = &"off"
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="." unique_id=863436479]
+stream = ExtResource("6_u0bg4")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

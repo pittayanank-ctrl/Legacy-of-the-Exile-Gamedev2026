@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://b2xe1vr12wmv0"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_kwxrn"]
+[ext_resource type="PackedScene" uid="uid://ccmytbksydnqb" path="res://Scenes/Levels/level_cas.tscn" id="2_82kw0"]
+[ext_resource type="Texture2D" uid="uid://buyn43pycxc7b" path="res://Assets/BG/castle1.png" id="2_kr4v0"]
+[ext_resource type="Texture2D" uid="uid://boe2afvr7hn7w" path="res://Assets/Icons/arrow.png" id="3_82kw0"]
+[ext_resource type="PackedScene" uid="uid://bydbpqt3654kp" path="res://Scenes/Actors/GameCamera.tscn" id="3_ql5v2"]
+[ext_resource type="PackedScene" uid="uid://bxk184q2yeamx" path="res://Scenes/Actors/enemycastle.tscn" id="5_dq50c"]
+
+[sub_resource type="Gradient" id="Gradient_5jsjh"]
+offsets = PackedFloat32Array(0.12650603, 0.36746988, 0.5481928)
+colors = PackedColorArray(0, 0, 0, 1, 0.25882354, 0.25882354, 0.25882354, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5v7gc"]
+gradient = SubResource("Gradient_5jsjh")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahict"]
+atlas = ExtResource("3_82kw0")
+region = Rect2(30, 0, 330, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgrt0"]
+atlas = ExtResource("3_82kw0")
+region = Rect2(0, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owleh"]
+atlas = ExtResource("3_82kw0")
+region = Rect2(0, 0, 330, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h440y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahict")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgrt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owleh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_kwxrn")]
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1781, 229)
+scale = Vector2(2.254424, 6.8000007)
+next_scene = ExtResource("2_82kw0")
+
+[node name="Parallax2D" type="Parallax2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=149648597]
+z_index = -4
+repeat_size = Vector2(1556.945, 0)
+repeat_times = 2
+
+[node name="Castle1" type="Sprite2D" parent="Level/Parallax2D" index="0" unique_id=1242645220]
+position = Vector2(1304, 325)
+scale = Vector2(0.93122005, 0.75265676)
+texture = ExtResource("2_kr4v0")
+
+[node name="Panel" type="Panel" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=700910101]
+offset_left = -209.0
+offset_top = -365.0
+offset_right = -169.0
+offset_bottom = -325.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Level/Panel" index="0" unique_id=1883389963]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 32.85
+anchor_top = 0.40000153
+anchor_right = 32.850006
+anchor_bottom = 0.40000153
+offset_left = 160.00006
+offset_top = 231.99994
+offset_right = 744.00006
+offset_bottom = 967.99994
+scale = Vector2(0.9016295, 1.0221044)
+texture = SubResource("GradientTexture2D_5v7gc")
+flip_h = true
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level/Panel" index="1" unique_id=728903039]
+z_index = 1
+position = Vector2(1852, 766)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_h440y")
+autoplay = "default"
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(-845.00006, 426)
+
+[node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("3_ql5v2")]
+offset = Vector2(0, -120)
+zoom = Vector2(1.4, 1.1)
+limit_left = -895
+limit_right = 1766
+position_smoothing_enabled = true
+normal_zoom = Vector2(1.3, 1.3)
+
+[node name="Enemy" parent="." index="8" unique_id=1240454980 instance=ExtResource("5_dq50c")]
+position = Vector2(-119.000015, 419.00003)
+scale = Vector2(3, 3)
+
+[node name="Enemy2" parent="." index="9" unique_id=1853068254 instance=ExtResource("5_dq50c")]
+position = Vector2(178.99998, 416.00003)
+scale = Vector2(3, 3)
+
+[node name="Enemy3" parent="." index="10" unique_id=832473689 instance=ExtResource("5_dq50c")]
+position = Vector2(448, 412.00003)
+scale = Vector2(3, 3)
+
+[node name="Enemy4" parent="." index="11" unique_id=913299912 instance=ExtResource("5_dq50c")]
+position = Vector2(805, 408)
+scale = Vector2(3, 3)

@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://c2g66361qmg41"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_le57y"]
+[ext_resource type="PackedScene" uid="uid://b2xe1vr12wmv0" path="res://Scenes/Levels/level_cas1.tscn" id="2_okke6"]
+[ext_resource type="Texture2D" uid="uid://tjosbmycyu76" path="res://Assets/BG/6ef50e64-62ac-43b7-acdc-25bb825626c7.png" id="2_pvmga"]
+[ext_resource type="Texture2D" uid="uid://c4nh2ieprvm24" path="res://Assets/BG/cityback.png" id="3_okke6"]
+[ext_resource type="Texture2D" uid="uid://r1v408nltj6e" path="res://Assets/BG/nature_3/1.png" id="4_oted3"]
+[ext_resource type="Texture2D" uid="uid://5gpqtwsj0pdc" path="res://Assets/BG/nature_3/2.png" id="5_vwplp"]
+[ext_resource type="Texture2D" uid="uid://cixh36y4rsxgw" path="res://Assets/BG/nature_3/3.png" id="6_tlt3d"]
+[ext_resource type="Texture2D" uid="uid://b3cxhe7vrs7so" path="res://Assets/BG/nature_3/4.png" id="7_cgkqu"]
+[ext_resource type="Texture2D" uid="uid://3xgvkv36ronb" path="res://Assets/NPC/bearded-idle.png" id="8_qywh7"]
+[ext_resource type="PackedScene" uid="uid://bydbpqt3654kp" path="res://Scenes/Actors/GameCamera.tscn" id="9_poxuy"]
+[ext_resource type="PackedScene" uid="uid://bxk184q2yeamx" path="res://Scenes/Actors/enemycastle.tscn" id="10_6smlf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnyrb"]
+atlas = ExtResource("8_qywh7")
+region = Rect2(0, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pq1c"]
+atlas = ExtResource("8_qywh7")
+region = Rect2(40, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3kri"]
+atlas = ExtResource("8_qywh7")
+region = Rect2(80, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cenkf"]
+atlas = ExtResource("8_qywh7")
+region = Rect2(120, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_diwrw"]
+atlas = ExtResource("8_qywh7")
+region = Rect2(160, 0, 40, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_akbig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnyrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pq1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3kri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cenkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_diwrw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_le57y")]
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(956, 407)
+scale = Vector2(0.996403, 2.168808)
+next_scene = ExtResource("2_okke6")
+
+[node name="6Ef50e6462Ac43b7Acdc25Bb825626c7" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=1006869797]
+position = Vector2(903.99994, 250.99998)
+scale = Vector2(0.8277512, 0.6926142)
+texture = ExtResource("2_pvmga")
+
+[node name="Cityback" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=537863605]
+texture_filter = 1
+position = Vector2(129, 318.00003)
+scale = Vector2(1.2476077, 0.70775765)
+texture = ExtResource("3_okke6")
+
+[node name="Para" type="Node2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=1946344920]
+z_index = -1
+position = Vector2(3159, 18)
+
+[node name="Parallax2D" type="Parallax2D" parent="Level/Para" index="0" unique_id=585107043]
+scale = Vector2(1.9225922, 2.3516443)
+scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(793.9563, -317)
+repeat_size = Vector2(574.595, 0)
+repeat_times = 2
+
+[node name="1" type="Sprite2D" parent="Level/Para/Parallax2D" index="0" unique_id=1913735187]
+position = Vector2(-1250, 286)
+texture = ExtResource("4_oted3")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Level/Para" index="1" unique_id=962048297]
+scale = Vector2(1.9225922, 2.3516443)
+scroll_scale = Vector2(0.2, 0)
+scroll_offset = Vector2(-238.0437, -355)
+repeat_size = Vector2(574.595, 0)
+repeat_times = 2
+
+[node name="2" type="Sprite2D" parent="Level/Para/Parallax2D2" index="0" unique_id=1321186883]
+position = Vector2(-1250, 286)
+scale = Vector2(1.0006192, 0.9094512)
+texture = ExtResource("5_vwplp")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Level/Para" index="2" unique_id=1527301688]
+scale = Vector2(1.9225922, 2.3516443)
+scroll_scale = Vector2(0.3, 0)
+scroll_offset = Vector2(-238.0437, -243)
+repeat_size = Vector2(574.595, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="3" type="Sprite2D" parent="Level/Para/Parallax2D3" index="0" unique_id=790385453]
+position = Vector2(-1250, 174)
+texture = ExtResource("6_tlt3d")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Level/Para" index="3" unique_id=1696050193]
+scroll_scale = Vector2(0.2, 0)
+scroll_offset = Vector2(-358, 88.00003)
+repeat_size = Vector2(574.595, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="4" type="Sprite2D" parent="Level/Para/Parallax2D4" index="0" unique_id=1389584387]
+position = Vector2(-2590.3323, 187.99997)
+scale = Vector2(1.4131944, 1.5030864)
+texture = ExtResource("7_cgkqu")
+
+[node name="NPC" type="Node2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=767983938]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level/NPC" index="0" unique_id=1218540386]
+z_index = 1
+position = Vector2(158, 481)
+rotation = 3.1415927
+scale = Vector2(1.65, -1.415)
+sprite_frames = SubResource("SpriteFrames_akbig")
+autoplay = "default"
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(-670, 487.00003)
+
+[node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("9_poxuy")]
+offset = Vector2(0, -120)
+zoom = Vector2(1.4, 1.1)
+limit_left = -895
+limit_right = 1153
+position_smoothing_enabled = true
+normal_zoom = Vector2(1.3, 1.3)
+
+[node name="Enemy" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="0" unique_id=1240454980 instance=ExtResource("10_6smlf")]
+position = Vector2(816.00006, 465.00003)
+scale = Vector2(3, 3)
+detection_distance = 150.0
+
+[node name="Enemy2" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="1" unique_id=1485864959 instance=ExtResource("10_6smlf")]
+position = Vector2(1098, 467.00003)
+scale = Vector2(3, 3)
+detection_distance = 450.0

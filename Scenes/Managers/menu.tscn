@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://cvmoaxjkhykyg"]
+
+[ext_resource type="Script" uid="uid://ce203qd3osn8c" path="res://Scenes/Managers/menu.gd" id="1_mlw60"]
+[ext_resource type="VideoStream" uid="uid://cgmuxg4sviqly" path="res://Assets/BG/33711112z.ogv" id="2_rf1qa"]
+[ext_resource type="Texture2D" uid="uid://d4lmer4ewoxb4" path="res://Assets/BG/logo.png" id="3_gc13p"]
+[ext_resource type="FontFile" uid="uid://cavnbm5a08lt1" path="res://Assets/Fonts/Cinzel-Medium.ttf" id="4_kje4i"]
+[ext_resource type="Texture2D" uid="uid://c36dtie544inx" path="res://Assets/UI/btnuimenuoff.png" id="5_rsqbe"]
+[ext_resource type="Texture2D" uid="uid://fkstuagn1p12" path="res://Assets/UI/btnmenuon.png" id="6_ay1rh"]
+[ext_resource type="AudioStream" uid="uid://dwpmkbi1vhmpe" path="res://Assets/Sound/Night Ambient 5 (Loop).wav" id="7_rf1qa"]
+[ext_resource type="AudioStream" uid="uid://pjii4o1efkmj" path="res://Assets/Sound/item_equip.wav" id="8_gc13p"]
+
+[sub_resource type="Animation" id="Animation_dsa84"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(875, 198)]
+}
+
+[sub_resource type="Animation" id="Animation_00qkb"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(875, 198), Vector2(875, 212), Vector2(875, 198)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mlw60"]
+_data = {
+&"RESET": SubResource("Animation_dsa84"),
+&"new_animation": SubResource("Animation_00qkb")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rf1qa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gc13p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rsqbe")
+}],
+"loop": 1,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ay1rh")
+}],
+"loop": 1,
+"name": &"on",
+"speed": 5.0
+}]
+
+[node name="Menu" type="Node2D" unique_id=2118595103]
+script = ExtResource("1_mlw60")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1850376462]
+z_index = -2
+offset_right = 1152.0
+offset_bottom = 648.0
+stream = ExtResource("2_rf1qa")
+autoplay = true
+expand = true
+loop = true
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=435394028]
+libraries/ = SubResource("AnimationLibrary_mlw60")
+autoplay = &"new_animation"
+
+[node name="Logo" type="Sprite2D" parent="AnimationPlayer" unique_id=1503243833]
+z_index = -1
+position = Vector2(875, 198)
+texture = ExtResource("3_gc13p")
+
+[node name="UI" type="Control" parent="." unique_id=73851025]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 1150.0
+offset_bottom = 520.0
+
+[node name="btnStart" type="Button" parent="UI" unique_id=2032890121]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 144.5
+offset_top = 299.0
+offset_right = 458.5
+offset_bottom = 337.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_kje4i")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rf1qa")
+text = "NEW GAME"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/btnStart" unique_id=1419399613]
+z_index = -1
+position = Vector2(143, 18)
+scale = Vector2(0.339, 0.3)
+sprite_frames = SubResource("SpriteFrames_gc13p")
+animation = &"off"
+
+[node name="btnContinue" type="Button" parent="UI" unique_id=1127801164]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 143.5
+offset_top = 359.0
+offset_right = 462.5
+offset_bottom = 399.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_kje4i")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rf1qa")
+disabled = true
+text = "LOAD GAME"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="UI/btnContinue" unique_id=1960562293]
+z_index = -1
+position = Vector2(144, 18)
+scale = Vector2(0.339, 0.3)
+sprite_frames = SubResource("SpriteFrames_gc13p")
+animation = &"off"
+
+[node name="btnOption" type="Button" parent="UI" unique_id=2020528339]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 143.5
+offset_top = 418.0
+offset_right = 461.5
+offset_bottom = 456.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_kje4i")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rf1qa")
+text = "OPTION"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="UI/btnOption" unique_id=1718879495]
+z_index = -1
+position = Vector2(144, 19)
+scale = Vector2(0.339, 0.3)
+sprite_frames = SubResource("SpriteFrames_gc13p")
+animation = &"off"
+
+[node name="btnCredit" type="Button" parent="UI" unique_id=972435517]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 147.5
+offset_top = 478.0
+offset_right = 462.5
+offset_bottom = 518.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_kje4i")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rf1qa")
+text = "CREDIT"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="UI/btnCredit" unique_id=1683714824]
+z_index = -1
+position = Vector2(140, 19)
+scale = Vector2(0.339, 0.3)
+sprite_frames = SubResource("SpriteFrames_gc13p")
+animation = &"off"
+
+[node name="btnExit" type="Button" parent="UI" unique_id=1405200124]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 143.5
+offset_top = 538.0
+offset_right = 458.5
+offset_bottom = 579.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_kje4i")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rf1qa")
+text = "EXIT GAME"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="UI/btnExit" unique_id=258609174]
+z_index = -1
+position = Vector2(144, 19)
+scale = Vector2(0.339, 0.3)
+sprite_frames = SubResource("SpriteFrames_gc13p")
+animation = &"off"
+
+[node name="NoSaveLabel" type="Label" parent="UI" unique_id=1910873933]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 595.0
+offset_right = 1154.0
+offset_bottom = 620.0
+theme_override_fonts/font = ExtResource("4_kje4i")
+theme_override_font_sizes/font_size = 18
+text = "No saved game found."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=703782924]
+stream = ExtResource("7_rf1qa")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="." unique_id=1381893185]
+stream = ExtResource("8_gc13p")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="UI/btnStart" to="." method="_on_btn_start_pressed"]
+[connection signal="pressed" from="UI/btnContinue" to="." method="_on_btn_continue_pressed"]
+[connection signal="pressed" from="UI/btnOption" to="." method="_on_btn_option_pressed"]
+[connection signal="pressed" from="UI/btnCredit" to="." method="_on_btn_credit_pressed"]
+[connection signal="pressed" from="UI/btnExit" to="." method="_on_btn_exit_pressed"]
+[connection signal="finished" from="MenuMusic" to="." method="_on_menu_music_finished"]

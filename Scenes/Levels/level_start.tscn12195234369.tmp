@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://bns01bilb7pvc"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_id2ep"]
+[ext_resource type="PackedScene" uid="uid://dekkdb3a0eifd" path="res://Scenes/Levels/level_village.tscn" id="2_gswm0"]
+[ext_resource type="Texture2D" uid="uid://ch654vxsx2nkn" path="res://Assets/Tile/tilee.png" id="4_gswm0"]
+[ext_resource type="Texture2D" uid="uid://hfdtmcja4sw3" path="res://Assets/BG/nature_4/1.png" id="5_c005d"]
+[ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://Scenes/Prefabs/theme.tres" id="5_p4nqb"]
+[ext_resource type="Texture2D" uid="uid://brtwu41psu5o2" path="res://Assets/BG/nature_4/2.png" id="6_p0ht6"]
+[ext_resource type="Texture2D" uid="uid://ckcnjonvqso6s" path="res://Assets/BG/nature_4/3.png" id="7_ffn51"]
+[ext_resource type="Texture2D" uid="uid://bvxhepw83ox6o" path="res://Assets/BG/tilestarat.png" id="7_vust8"]
+[ext_resource type="Texture2D" uid="uid://cdrlwb830yf0l" path="res://Assets/BG/nature_4/4.png" id="8_ap8qi"]
+[ext_resource type="Texture2D" uid="uid://lc7j3q0snxct" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="8_c005d"]
+[ext_resource type="PackedScene" uid="uid://dhvmfd7ogyqld" path="res://Scenes/Actors/NPC.tscn" id="8_ffn51"]
+[ext_resource type="PackedScene" uid="uid://bydbpqt3654kp" path="res://Scenes/Actors/GameCamera.tscn" id="8_p4nqb"]
+[ext_resource type="PackedScene" uid="uid://cu4uhigoujqbu" path="res://Scenes/Prefabs/DialogueUI.tscn" id="10_ap8qi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffn51"]
+atlas = ExtResource("8_c005d")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ap8qi"]
+atlas = ExtResource("8_c005d")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8vmu"]
+atlas = ExtResource("8_c005d")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8omik"]
+atlas = ExtResource("8_c005d")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c76j"]
+atlas = ExtResource("8_c005d")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kxh35"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffn51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ap8qi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8vmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8omik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c76j")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_id2ep")]
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(872, 408)
+scale = Vector2(6.8166194, 39.74415)
+next_scene = ExtResource("2_gswm0")
+
+[node name="Background1" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=1072429833]
+metadata/_edit_lock_ = true
+
+[node name="Background2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="1" unique_id=1070008654]
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=430664684]
+offset_left = -928.0
+offset_top = 544.0
+offset_right = 904.0
+offset_bottom = 616.0
+color = Color(0.07428471, 0.067409925, 0.06282619, 1)
+
+[node name="Tilee" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=824716567]
+texture_filter = 2
+position = Vector2(0, 488)
+scale = Vector2(1.0558772, 1)
+texture = ExtResource("4_gswm0")
+
+[node name="Para" type="Node2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=1781010144]
+position = Vector2(1088, 16)
+
+[node name="Parallax2D" type="Parallax2D" parent="Level/Para" index="0" unique_id=2029340911]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="1" type="Sprite2D" parent="Level/Para/Parallax2D" index="0" unique_id=669723466]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("5_c005d")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Level/Para" index="1" unique_id=924972854]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(1114.85, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 2
+
+[node name="2" type="Sprite2D" parent="Level/Para/Parallax2D2" index="0" unique_id=1614137669]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("6_p0ht6")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Level/Para" index="2" unique_id=1730325322]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="3" type="Sprite2D" parent="Level/Para/Parallax2D3" index="0" unique_id=1298403363]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("7_ffn51")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Level/Para" index="3" unique_id=1407057498]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="4" type="Sprite2D" parent="Level/Para/Parallax2D4" index="0" unique_id=406593429]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("8_ap8qi")
+
+[node name="Npc" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=522633972 instance=ExtResource("8_ffn51")]
+z_index = 2
+texture_filter = 1
+position = Vector2(-80, 424)
+scale = Vector2(3.111848, 3.0764527)
+collision_layer = 0
+collision_mask = 7
+npc_name = "Father"
+
+[node name="DialogueUi" parent="Level/Npc" index="2" unique_id=1955745153 instance=ExtResource("10_ap8qi")]
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Level/Npc" index="3" unique_id=642300042]
+z_index = -2
+texture_filter = 1
+position = Vector2(1.9073486e-06, -7.8011966)
+scale = Vector2(0.64270484, 0.5688371)
+sprite_frames = SubResource("SpriteFrames_kxh35")
+autoplay = "default"
+frame_progress = 0.37089276
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+z_index = 5
+position = Vector2(-664.00006, 424.00003)
+
+[node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("8_p4nqb")]
+limit_right = 870
+
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
+offset_left = -99.0
+offset_top = -39.5
+offset_right = 99.0
+offset_bottom = 39.5
+theme_override_colors/font_color = Color(0.5529412, 0.38431373, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "Level 1"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Text" parent_id_path=PackedInt32Array(416249055) index="0" unique_id=1040528611]
+offset_left = 984.0
+offset_top = 267.0
+offset_right = 1241.0
+offset_bottom = 318.0
+theme = ExtResource("5_p4nqb")
+text = "เข้าประตูเพื่อไปด่านต่อไป"
+
+[node name="Tilestarat" type="Sprite2D" parent="." index="8" unique_id=9523025]
+texture_filter = 1
+position = Vector2(-7, 316)
+texture = ExtResource("7_vust8")

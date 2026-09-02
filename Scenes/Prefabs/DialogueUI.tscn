@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cu4uhigoujqbu"]
+
+[ext_resource type="Script" uid="uid://iv4lp1cenauh" path="res://Scenes/Prefabs/dialogue_ui.gd" id="1_gh0n7"]
+[ext_resource type="Texture2D" uid="uid://cl7wk0ynicqsi" path="res://Assets/UI/E.png" id="2_4grpu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfrxh"]
+atlas = ExtResource("2_4grpu")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arg5b"]
+atlas = ExtResource("2_4grpu")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n208v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfrxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arg5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfrxh")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="DialogueUi" type="CanvasLayer" unique_id=1955745153]
+script = ExtResource("1_gh0n7")
+
+[node name="Panel" type="Panel" parent="." unique_id=1821531386]
+offset_top = 552.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="LeftPortrait" type="TextureRect" parent="Panel" unique_id=1043068400]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -125.0
+offset_right = 187.0
+offset_bottom = -1.0
+expand_mode = 3
+
+[node name="RightPortrait" type="TextureRect" parent="Panel" unique_id=386200687]
+layout_mode = 0
+offset_left = 973.0
+offset_top = -124.0
+offset_right = 1134.0
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=372335208]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 1088.0
+offset_bottom = 96.0
+
+[node name="NameLabel" type="Label" parent="Panel/VBoxContainer" unique_id=547747739]
+layout_mode = 2
+text = "NPC"
+
+[node name="DialogueLabel" type="Label" parent="Panel/VBoxContainer" unique_id=215672392]
+layout_mode = 2
+text = "Dialogue"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ContinueLabel" type="Label" parent="Panel/VBoxContainer" unique_id=907230419]
+layout_mode = 2
+text = "[E] พูดต่อ"
+horizontal_alignment = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/VBoxContainer" unique_id=1970722440]
+texture_filter = 1
+position = Vector2(966, 67.00001)
+scale = Vector2(1.5661777, 1.5000007)
+sprite_frames = SubResource("SpriteFrames_n208v")
+frame = 2
+frame_progress = 1.0

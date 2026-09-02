@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://ckn8c2ywkoa2"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_wx41x"]
+[ext_resource type="PackedScene" uid="uid://c2g66361qmg41" path="res://Scenes/Levels/level_citycas.tscn" id="2_cr4bq"]
+[ext_resource type="Texture2D" uid="uid://dbap8ynplism3" path="res://Assets/BG/Forrest2/back.png" id="3_imgl7"]
+[ext_resource type="Texture2D" uid="uid://b52vxjnkwhoyi" path="res://Assets/BG/Forrest2/middle.png" id="4_xichj"]
+[ext_resource type="Texture2D" uid="uid://bp8yf5wkdlcxn" path="res://Assets/BG/Forrest2/front.png" id="5_ubqmq"]
+[ext_resource type="Texture2D" uid="uid://cutjpufahfanp" path="res://Assets/Tile/tilee2.png" id="6_imgl7"]
+[ext_resource type="Texture2D" uid="uid://boe2afvr7hn7w" path="res://Assets/Icons/arrow.png" id="6_wx41x"]
+[ext_resource type="PackedScene" uid="uid://bydbpqt3654kp" path="res://Scenes/Actors/GameCamera.tscn" id="6_xichj"]
+[ext_resource type="PackedScene" uid="uid://badk5qkrbwluh" path="res://Scenes/Actors/ForrestBoss.tscn" id="7_xichj"]
+[ext_resource type="PackedScene" uid="uid://c8c8agwdreq8" path="res://Scenes/Actors/enemycastle2.tscn" id="8_ubqmq"]
+
+[sub_resource type="Gradient" id="Gradient_87mpf"]
+offsets = PackedFloat32Array(0.12650603, 0.36746988, 0.5481928)
+colors = PackedColorArray(0, 0, 0, 1, 0.25882354, 0.25882354, 0.25882354, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cr4bq"]
+gradient = SubResource("Gradient_87mpf")
+
+[sub_resource type="Animation" id="Animation_46obk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Arrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1736, 412)]
+}
+
+[sub_resource type="Animation" id="Animation_na8ed"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Arrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1736, 412), Vector2(1772, 412), Vector2(1736, 412)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f04qn"]
+_data = {
+&"RESET": SubResource("Animation_46obk"),
+&"new_animation": SubResource("Animation_na8ed")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46obk"]
+size = Vector2(33, 409)
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_wx41x")]
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1968, 152)
+scale = Vector2(3.7142856, 14)
+next_scene = ExtResource("2_cr4bq")
+
+[node name="Background1" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=1072429833]
+metadata/_edit_lock_ = true
+
+[node name="Background2" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="1" unique_id=1070008654]
+metadata/_edit_lock_ = true
+
+[node name="Para" type="Node2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=693755882]
+z_index = -1
+position = Vector2(1416, 40)
+
+[node name="Parallax2D" type="Parallax2D" parent="Level/Para" index="0" unique_id=1617528729]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(828.255, 0)
+repeat_times = 4
+
+[node name="Back" type="Sprite2D" parent="Level/Para/Parallax2D" index="0" unique_id=1872307122]
+texture_filter = 1
+position = Vector2(-1081.5354, 268)
+scale = Vector2(3.0475333, 3.25)
+texture = ExtResource("3_imgl7")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Level/Para" index="1" unique_id=1604709149]
+scroll_scale = Vector2(0.2, 0)
+scroll_offset = Vector2(80, -8)
+repeat_size = Vector2(828.255, 0)
+repeat_times = 4
+
+[node name="Middle" type="Sprite2D" parent="Level/Para/Parallax2D2" index="0" unique_id=953128436]
+texture_filter = 1
+position = Vector2(-1081.5354, 228.97998)
+scale = Vector2(3.0475333, 2.66225)
+texture = ExtResource("4_xichj")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Level/Para" index="2" unique_id=993244243]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(828.255, 0)
+repeat_times = 4
+
+[node name="Front" type="Sprite2D" parent="Level/Para/Parallax2D3" index="0" unique_id=2089255740]
+texture_filter = 1
+position = Vector2(-1081.5354, 196.98001)
+scale = Vector2(3.0475333, 3.0622501)
+texture = ExtResource("5_ubqmq")
+
+[node name="Parallax2D" type="Parallax2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=1115713670]
+scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(1720, 0)
+repeat_size = Vector2(1755.39, 0)
+repeat_times = 3
+ignore_camera_scroll = true
+
+[node name="Tilee2" type="Sprite2D" parent="Level/Parallax2D" index="0" unique_id=1116970923]
+texture_filter = 1
+position = Vector2(-877.75, 501)
+scale = Vector2(0.8677706, 0.9126984)
+texture = ExtResource("6_imgl7")
+
+[node name="Panel" type="Panel" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=1985213934]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Level/Panel" index="0" unique_id=1772288533]
+layout_mode = 0
+offset_left = 1352.0
+offset_top = -5.0
+offset_right = 1936.0
+offset_bottom = 643.0
+texture = SubResource("GradientTexture2D_cr4bq")
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Level/Panel" index="1" unique_id=1886720764]
+libraries/ = SubResource("AnimationLibrary_f04qn")
+autoplay = &"new_animation"
+
+[node name="Arrow" type="Sprite2D" parent="Level/Panel/AnimationPlayer" index="0" unique_id=474898015]
+position = Vector2(1736, 412)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_wx41x")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=1447477126]
+position = Vector2(-2494, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/CharacterBody2D" index="0" unique_id=1356926134]
+position = Vector2(896, 328)
+shape = SubResource("RectangleShape2D_46obk")
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(-1256.0001, 416)
+
+[node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("6_xichj")]
+offset = Vector2(0, -120)
+limit_left = -1596
+limit_top = -9999992
+limit_right = 1927
+limit_bottom = 10000008
+
+[node name="Enemy" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="0" unique_id=1240454980 instance=ExtResource("7_xichj")]
+position = Vector2(1432, 399.99997)
+scale = Vector2(3.277526, 3.934691)
+move_speed = 180.0
+attack_damage = 30
+
+[node name="Enemy3" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="1" unique_id=1464441284 instance=ExtResource("8_ubqmq")]
+position = Vector2(-88, 424)
+max_hp = 250
+
+[node name="Enemy4" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="2" unique_id=107911823 instance=ExtResource("8_ubqmq")]
+position = Vector2(648, 424)
+max_hp = 250
+
+[node name="UserInterface" parent="." index="5" unique_id=1799764374]
+visible = false
+
+[node name="Label" parent="UserInterface" index="3" unique_id=1103718868]
+offset_left = -99.0
+offset_top = -39.5
+offset_right = 99.0
+offset_bottom = 39.5
+theme_override_colors/font_color = Color(0.5529412, 0.38431373, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "Level 1"
+horizontal_alignment = 1

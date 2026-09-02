@@ -1,0 +1,277 @@
+[gd_scene format=3 uid="uid://b2cqwn84sfwco"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_5xggy"]
+[ext_resource type="Texture2D" uid="uid://ch654vxsx2nkn" path="res://Assets/Tile/tilee.png" id="2_uvgwx"]
+[ext_resource type="Texture2D" uid="uid://hfdtmcja4sw3" path="res://Assets/BG/nature_4/1.png" id="3_thjae"]
+[ext_resource type="Texture2D" uid="uid://brtwu41psu5o2" path="res://Assets/BG/nature_4/2.png" id="4_mdkol"]
+[ext_resource type="Texture2D" uid="uid://ckcnjonvqso6s" path="res://Assets/BG/nature_4/3.png" id="5_0doqd"]
+[ext_resource type="Texture2D" uid="uid://cdrlwb830yf0l" path="res://Assets/BG/nature_4/4.png" id="6_253w7"]
+[ext_resource type="Texture2D" uid="uid://boe2afvr7hn7w" path="res://Assets/Icons/arrow.png" id="7_ylpew"]
+[ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://Scenes/Prefabs/level_finish_door.tscn" id="8_30e3i"]
+[ext_resource type="PackedScene" uid="uid://cx1luupvsxhnf" path="res://Scenes/Levels/level_start2.tscn" id="9_253w7"]
+[ext_resource type="Texture2D" uid="uid://dn52urd4f7qrm" path="res://Assets/Icons/Keyboard Letters and Symbols.png" id="10_0doqd"]
+[ext_resource type="PackedScene" uid="uid://bydbpqt3654kp" path="res://Scenes/Actors/GameCamera.tscn" id="10_thjae"]
+[ext_resource type="Texture2D" uid="uid://bpyl038sqy08w" path="res://Assets/BG/ebc2b9c4-742b-47ef-b957-81510f0550fa.png" id="10_uvgwx"]
+[ext_resource type="PackedScene" uid="uid://hqqmh0bfg5h0" path="res://Scenes/Actors/traininggirl.tscn" id="11_mdkol"]
+[ext_resource type="Texture2D" uid="uid://caxl0c7jaatnx" path="res://Assets/Icons/FullKeyboardMouse_Tileset.png" id="14_253w7"]
+
+[sub_resource type="Gradient" id="Gradient_owleh"]
+offsets = PackedFloat32Array(0.12650603, 0.36746988, 0.5481928)
+colors = PackedColorArray(0, 0, 0, 1, 0.25882354, 0.25882354, 0.25882354, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_58sp5"]
+gradient = SubResource("Gradient_owleh")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahict"]
+atlas = ExtResource("7_ylpew")
+region = Rect2(30, 0, 330, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgrt0"]
+atlas = ExtResource("7_ylpew")
+region = Rect2(0, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owleh"]
+atlas = ExtResource("7_ylpew")
+region = Rect2(0, 0, 330, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ci1ce"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahict")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgrt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owleh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bf7v4"]
+size = Vector2(33, 409)
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_5xggy")]
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1585, 322)
+
+[node name="Level" parent="." index="1" unique_id=1752500785]
+position = Vector2(-7, -78)
+
+[node name="Tilee2" type="Sprite2D" parent="Level" index="2" unique_id=462870750]
+texture_filter = 2
+position = Vector2(-139.87498, 648)
+scale = Vector2(0.8973654, 1.284553)
+texture = ExtResource("2_uvgwx")
+
+[node name="Tilee" type="Sprite2D" parent="Level" index="3" unique_id=902518753]
+texture_filter = 2
+position = Vector2(-142.00002, 609)
+scale = Vector2(0.8973654, 1.2154477)
+texture = ExtResource("2_uvgwx")
+
+[node name="Para" type="Node2D" parent="Level" index="4" unique_id=1038955628]
+position = Vector2(1085, 108)
+scale = Vector2(1, 1.16)
+
+[node name="Parallax2D" type="Parallax2D" parent="Level/Para" index="0" unique_id=1629874741]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="1" type="Sprite2D" parent="Level/Para/Parallax2D" index="0" unique_id=901240909]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("3_thjae")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Level/Para" index="1" unique_id=1862366791]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(1114.85, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 2
+
+[node name="2" type="Sprite2D" parent="Level/Para/Parallax2D2" index="0" unique_id=702945190]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("4_mdkol")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Level/Para" index="2" unique_id=704922640]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="3" type="Sprite2D" parent="Level/Para/Parallax2D3" index="0" unique_id=2030861048]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("5_0doqd")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Level/Para" index="3" unique_id=409011338]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="4" type="Sprite2D" parent="Level/Para/Parallax2D4" index="0" unique_id=515816767]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("6_253w7")
+
+[node name="Panel" type="Panel" parent="Level" index="5" unique_id=2003853851]
+offset_left = -1451.0
+offset_top = -225.0
+offset_right = -1411.0
+offset_bottom = -185.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Level/Panel" index="0" unique_id=1996504899]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 32.724995
+anchor_top = 0.3
+anchor_right = 32.725
+anchor_bottom = 0.3
+offset_left = 160.00006
+offset_top = 231.99994
+offset_right = 744.00006
+offset_bottom = 967.99994
+scale = Vector2(0.9016295, 1.0221044)
+texture = SubResource("GradientTexture2D_58sp5")
+flip_h = true
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level/Panel" index="1" unique_id=1629705315]
+z_index = 1
+position = Vector2(1791, 766.99994)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_ci1ce")
+autoplay = "default"
+
+[node name="LevelFinishDoor2" parent="Level" index="6" unique_id=1136132539 instance=ExtResource("8_30e3i")]
+z_index = 1
+position = Vector2(567.99994, 158.99994)
+scale = Vector2(2.2863064, 14.454411)
+next_scene = ExtResource("9_253w7")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Level" index="7" unique_id=2130036910]
+position = Vector2(-909, 387)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/CharacterBody2D" index="0" unique_id=1360959161]
+z_index = 5
+shape = SubResource("RectangleShape2D_bf7v4")
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(-688.00006, 456.00003)
+
+[node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("10_thjae")]
+limit_right = 540
+
+[node name="Coins" parent="." index="3" unique_id=1530662565]
+position = Vector2(-7, -78)
+
+[node name="Enemies" parent="." index="4" unique_id=1580630701]
+z_index = 1
+position = Vector2(-7, -78)
+
+[node name="Enemy" parent="Enemies" index="0" unique_id=1240454980 instance=ExtResource("11_mdkol")]
+position = Vector2(-39, 542)
+rotation = 0.0004265296
+scale = Vector2(1.9316134, 1.7915316)
+
+[node name="Text" parent="." index="6" unique_id=416249055]
+position = Vector2(-7, -79)
+
+[node name="ColorRect" type="ColorRect" parent="." index="8" unique_id=183675234]
+offset_left = -783.0
+offset_top = 267.0
+offset_right = -580.0
+offset_bottom = 383.0
+color = Color(0, 0, 0, 0.6509804)
+metadata/_edit_lock_ = true
+
+[node name="KeyboardLettersAndSymbols" type="Sprite2D" parent="ColorRect" index="0" unique_id=1290210466]
+position = Vector2(48, 24)
+texture = ExtResource("10_0doqd")
+region_enabled = true
+region_rect = Rect2(47.953087, 31.75749, 16.104553, 16.762602)
+
+[node name="KeyboardLettersAndSymbols2" type="Sprite2D" parent="ColorRect" index="1" unique_id=2135531]
+position = Vector2(28, 23)
+texture = ExtResource("10_0doqd")
+region_enabled = true
+region_rect = Rect2(0.07469177, 31.039312, 16.104553, 16.762602)
+
+[node name="Label" type="Label" parent="ColorRect" index="2" unique_id=1453375094]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 12.0
+offset_right = 175.0
+offset_bottom = 35.0
+text = "เพื่อเดินซ้ายขวา"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="ColorRect" index="3" unique_id=1193547564]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.19827586
+anchor_bottom = 0.19827586
+offset_left = 63.0
+offset_top = 12.0
+offset_right = 175.0
+offset_bottom = 35.0
+text = "โจมตี"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="ColorRect" index="4" unique_id=1151966771]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.4224138
+anchor_bottom = 0.4224138
+offset_left = 63.0
+offset_top = 12.0
+offset_right = 175.0
+offset_bottom = 35.0
+text = "ป้องกัน"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="ColorRect" index="5" unique_id=1480370072]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.62068963
+anchor_bottom = 0.62068963
+offset_left = 63.0
+offset_top = 12.0
+offset_right = 175.0
+offset_bottom = 35.0
+text = "วิ่ง"
+metadata/_edit_use_anchors_ = true
+
+[node name="FullKeyboardMouseTileset" type="Sprite2D" parent="ColorRect" index="6" unique_id=1701387597]
+position = Vector2(36, 49)
+texture = ExtResource("14_253w7")
+region_enabled = true
+region_rect = Rect2(224.23001, 144.64473, 16.559357, 15.860275)
+
+[node name="FullKeyboardMouseTileset2" type="Sprite2D" parent="ColorRect" index="7" unique_id=1775714859]
+position = Vector2(36, 73)
+texture = ExtResource("14_253w7")
+region_enabled = true
+region_rect = Rect2(287.936, 144.44688, 16.559357, 15.860275)
+
+[node name="FullKeyboardMouseTileset3" type="Sprite2D" parent="ColorRect" index="8" unique_id=242324278]
+position = Vector2(36, 99)
+texture = ExtResource("14_253w7")
+region_enabled = true
+region_rect = Rect2(143.30437, 80.5065, 39.225815, 16.026978)
+
+[node name="Ebc2b9c4742b47EfB95781510f0550Fa" type="Sprite2D" parent="." index="9" unique_id=2000135042]
+position = Vector2(-155.93748, 389.99997)
+scale = Vector2(0.47732067, 0.39451477)
+texture = ExtResource("10_uvgwx")

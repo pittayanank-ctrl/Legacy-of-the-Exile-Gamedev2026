@@ -1,61 +1,198 @@
 extends CanvasLayer
 
-@onready var score_label = %ScoreLabel
-@onready var hp_bar = %ProgressBar
-@onready var alert_label: Label = $GameUI/BottomBar/AlertLabel
 
-func _process(_delta):
-	# Set the score label text to the score variable in game maanger script
-	hp_bar.value = GameManager.hp
-	$GameUI/TopBar/btnSound/on.visible   = GameManager.sfx_on
-	$GameUI/TopBar/btnSound/mute.visible = !GameManager.sfx_on
-	$GameUI/TopBar/btnMusic/mute.visible = !GameManager.music_on
-	$GameUI/TopBar/LifeRect.size.x = 48 * GameManager.life
+# =========================================================
+# TOP UI
+# =========================================================
 
-func alert(text):
-	alert_label.text = text
-	alert_label.visible = true
-	alert_label.scale = Vector2.ZERO
-	var tween = create_tween()
-	tween.tween_property(alert_label, "scale", Vector2(1,1), 0.3)
-	await get_tree().create_timer(2).timeout
-	alert_label.visible = false 
+@onready var hp_bar: ProgressBar = $TopUI/HealthBar1/HPBar
+@onready var stamina_bar: ProgressBar = $TopUI/HealthBar1/StaminaBar
+
+
+# =========================================================
+# PAUSE UI
+# =========================================================
+
+@onready var pause_ui: Control = $PauseUI
+@onready var game_over_ui: Control = $OverUI
+
+@onready var option_button: Button = $PauseUI/PauseTab/OptionButton
+@onready var restart_button: Button = $PauseUI/PauseTab/RestartButton
+@onready var exit_button: Button = $PauseUI/PauseTab/ExitButton
+@onready var restart_button2: Button = $OverUI/PauseTab2/RestartButton
+@onready var exit_button2: Button = $OverUI/PauseTab2/ExitButton
+
+# =========================================================
+# BUTTON ANIMATION
+# =========================================================
+
+@onready var buttons = {
+	option_button: $PauseUI/PauseTab/OptionButton/AnimatedSprite2D,
+	restart_button: $PauseUI/PauseTab/RestartButton/AnimatedSprite2D2,
+	exit_button: $PauseUI/PauseTab/ExitButton/AnimatedSprite2D3,
+	restart_button2: $OverUI/PauseTab2/RestartButton/AnimatedSprite2D2,
+	exit_button2: $OverUI/PauseTab2/ExitButton/AnimatedSprite2D3
+}
+
+
+# =========================================================
+# PLAYER
+# =========================================================
+
+var player: Player = null
+
+
+# =========================================================
+# READY
+# =========================================================
+
+func _ready() -> void:
+
+	# UI ต้องทำงานได้ตอนเกม Pause
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
+	# ซ่อน Pause ตอนเริ่มเกม
+	pause_ui.visible = false
+	game_over_ui.visible = false
+
+	# หา Player
+	await get_tree().process_frame
+
+	player = get_tree().get_first_node_in_group("Player")
+
+	if player:
+		update_ui()
+
+	# ตั้ง Animation ปุ่ม
+	for button in buttons:
+
+		var button_sprite: AnimatedSprite2D = buttons[button]
+
+		button_sprite.play("off")
+
+		button.mouse_entered.connect(
+			_on_button_mouse_entered.bind(button_sprite)
+		)
+
+		button.mouse_exited.connect(
+			_on_button_mouse_exited.bind(button_sprite)
+		)
+
+
+# =========================================================
+# UPDATE UI
+# =========================================================
+
+func _process(_delta: float) -> void:
+
+	if not is_instance_valid(player):
+		player = get_tree().get_first_node_in_group("Player")
+
+	if player:
+		update_ui()
+
+
+func update_ui() -> void:
+
+	hp_bar.max_value = player.max_hp
+	hp_bar.value = player.hp
+
+	stamina_bar.max_value = player.max_stamina
+	stamina_bar.value = player.stamina
+
+
+# =========================================================
+# PAUSE INPUT
+# =========================================================
+
+func _unhandled_input(event: InputEvent) -> void:
+
+	if event.is_action_pressed("pause"):
+
+		if get_tree().paused:
+			resume_game()
+		else:
+			pause_game()
+
+
+# =========================================================
+# PAUSE
+# =========================================================
+
+func pause_game() -> void:
+
+	pause_ui.visible = true
+
+	get_tree().paused = true
+
+
+# =========================================================
+# RESUME
+# =========================================================
+
+func resume_game() -> void:
+
+	get_tree().paused = false
+
+	pause_ui.visible = false
+
+
+# =========================================================
+# OPTION
+# =========================================================
+
+func _on_option_button_pressed() -> void:
+
+	get_tree().paused = false
+
+	get_tree().change_scene_to_file(
+		"res://Scenes/Managers/options.tscn"
+	)
+
+
+# =========================================================
+# RESTART
+# =========================================================
+
+func _on_restart_button_pressed() -> void:
+
+	get_tree().paused = false
+
+	get_tree().reload_current_scene()
+
+
+# =========================================================
+# EXIT
+# =========================================================
+
+func _on_exit_button_pressed() -> void:
+
+	get_tree().paused = false
+
+	get_tree().change_scene_to_file(
+		"res://Scenes/Levels/menu.tscn"
+	)
+
+
+# =========================================================
+# BUTTON HOVER
+# =========================================================
+
+func _on_button_mouse_entered(
+	button_sprite: AnimatedSprite2D
+) -> void:
+
+	button_sprite.play("on")
+
+
+func _on_button_mouse_exited(
+	button_sprite: AnimatedSprite2D
+) -> void:
+
+	button_sprite.play("off")
 	
-func _on_btn_sound_pressed() -> void:
-	GameManager.sfx_on = !GameManager.sfx_on
-	GameManager.update_option()
-	GameManager.save_option()
-	
-func _on_btn_music_pressed() -> void:
-	GameManager.music_on = !GameManager.music_on
-	GameManager.update_option()
-	GameManager.save_option()
-	
-func _on_btn_left_pressed() -> void:
-	Input.action_press("Left")
+func show_game_over() -> void:
 
-func _on_btn_left_released() -> void:
-	Input.action_release("Left")
+	get_tree().paused = true
 
-func _on_btn_up_pressed() -> void:
-	Input.action_press("Jump")
-
-func _on_btn_up_released() -> void:
-	Input.action_release("Jump")
-
-func _on_btn_right_pressed() -> void:
-	Input.action_press("Right")
-
-func _on_btn_right_released() -> void:
-	Input.action_release("Right")
-
-func _on_btn_shoot_button_down() -> void:
-	Input.action_press("Shoot")
-	
-func _on_btn_shoot_button_up() -> void:
-	Input.action_release("Shoot")
-
-
-func _on_btn_save_pressed() -> void:
-	GameManager.save_game()
-	alert("Game is saved.")
+	game_over_ui.visible = true

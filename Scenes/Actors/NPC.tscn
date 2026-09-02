@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dhvmfd7ogyqld"]
+
+[ext_resource type="Script" uid="uid://bpq55a2mb78ot" path="res://Scenes/Actors/npc.gd" id="1_chcwo"]
+[ext_resource type="Texture2D" uid="uid://cl7wk0ynicqsi" path="res://Assets/UI/E.png" id="2_7r31d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j2inh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2inh"]
+size = Vector2(48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfrxh"]
+atlas = ExtResource("2_7r31d")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arg5b"]
+atlas = ExtResource("2_7r31d")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_npl5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfrxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arg5b")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Npc" type="CharacterBody2D" unique_id=522633972]
+script = ExtResource("1_chcwo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2132819717]
+z_index = -3
+shape = SubResource("CapsuleShape2D_j2inh")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=543022593]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1309975882]
+shape = SubResource("RectangleShape2D_j2inh")
+
+[node name="talk_button" type="AnimatedSprite2D" parent="." unique_id=2134267479]
+texture_filter = 1
+position = Vector2(0, -19)
+scale = Vector2(0.30882353, 0.3125)
+sprite_frames = SubResource("SpriteFrames_npl5c")
+autoplay = "default"
+frame_progress = 0.4860788
+
+[node name="NPCVisual" type="Node2D" parent="." unique_id=564515414]
+z_index = -1
+scale = Vector2(0.3, 0.3)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPCVisual" unique_id=548535444]
+z_index = -1

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bydbpqt3654kp"]
+
+[ext_resource type="Script" uid="uid://1vi3ofuib6cv" path="res://Scenes/Actors/game_camera.gd" id="1_glch5"]
+
+[node name="GameCamera" type="Camera2D" unique_id=2097110056]
+offset = Vector2(0, -140)
+limit_left = -896
+drag_bottom_margin = 0.0
+script = ExtResource("1_glch5")
+normal_zoom = Vector2(1.2, 1.2)
+combat_zoom = Vector2(1.6, 1.6)

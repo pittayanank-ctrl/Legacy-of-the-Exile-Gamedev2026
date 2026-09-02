@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://bgq4h5j7raab8"]
+
+[ext_resource type="FontFile" uid="uid://cavnbm5a08lt1" path="res://Assets/Fonts/Cinzel-Medium.ttf" id="1_fh8b0"]
+
+[resource]
+default_font = ExtResource("1_fh8b0")

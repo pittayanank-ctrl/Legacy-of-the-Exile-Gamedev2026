@@ -1,0 +1,378 @@
+[gd_scene format=3 uid="uid://bwdbbye78ecl1"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_2bs0i"]
+[ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://Scenes/Prefabs/level_finish_door.tscn" id="1_pwmx8"]
+[ext_resource type="Texture2D" uid="uid://ch654vxsx2nkn" path="res://Assets/Tile/tilee.png" id="3_yvjih"]
+[ext_resource type="Texture2D" uid="uid://hfdtmcja4sw3" path="res://Assets/BG/nature_4/1.png" id="4_1kmru"]
+[ext_resource type="Texture2D" uid="uid://brtwu41psu5o2" path="res://Assets/BG/nature_4/2.png" id="5_bv4da"]
+[ext_resource type="Texture2D" uid="uid://ckcnjonvqso6s" path="res://Assets/BG/nature_4/3.png" id="6_iy56i"]
+[ext_resource type="Texture2D" uid="uid://cdrlwb830yf0l" path="res://Assets/BG/nature_4/4.png" id="7_ypnii"]
+[ext_resource type="PackedScene" uid="uid://dhvmfd7ogyqld" path="res://Scenes/Actors/NPC.tscn" id="8_r4e73"]
+[ext_resource type="Texture2D" uid="uid://lc7j3q0snxct" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="9_1ngce"]
+[ext_resource type="Script" uid="uid://dgimd832oimtc" path="res://Scenes/Prefabs/DialogueGroup.gd" id="10_6xevp"]
+[ext_resource type="Script" uid="uid://cdhi2dfrqh1wr" path="res://Scenes/Prefabs/DialogueLine.gd" id="11_5pb6v"]
+[ext_resource type="Texture2D" uid="uid://dx2r3mf23no60" path="res://Assets/Player/heropic.psd.png" id="12_hy5eu"]
+[ext_resource type="Texture2D" uid="uid://ld0hsl0yy4kk" path="res://Assets/NPC/c7cbec1d-b18e-44ce-8286-4f7bc5b0d889.png" id="13_25sun"]
+[ext_resource type="PackedScene" uid="uid://cu4uhigoujqbu" path="res://Scenes/Prefabs/DialogueUI.tscn" id="14_yb1up"]
+[ext_resource type="FontFile" uid="uid://cavnbm5a08lt1" path="res://Assets/Fonts/Cinzel-Medium.ttf" id="15_5akke"]
+[ext_resource type="Texture2D" uid="uid://boe2afvr7hn7w" path="res://Assets/Icons/arrow.png" id="16_pwmx8"]
+[ext_resource type="PackedScene" uid="uid://bydbpqt3654kp" path="res://Scenes/Actors/GameCamera.tscn" id="18_xv4d7"]
+[ext_resource type="PackedScene" uid="uid://ddf4ivwyrexi4" path="res://Scenes/Levels/level_village1.tscn" id="19_owleh"]
+[ext_resource type="Texture2D" uid="uid://bvxhepw83ox6o" path="res://Assets/BG/tilestarat.png" id="22_qw7u0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c76j"]
+atlas = ExtResource("9_1ngce")
+region = Rect2(400, 9, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5ytt"]
+atlas = ExtResource("9_1ngce")
+region = Rect2(480, 9, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo7x0"]
+atlas = ExtResource("9_1ngce")
+region = Rect2(560, 9, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apq7u"]
+atlas = ExtResource("9_1ngce")
+region = Rect2(640, 9, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klkwe"]
+atlas = ExtResource("9_1ngce")
+region = Rect2(720, 9, 80, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fuhk3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c76j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5ytt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo7x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apq7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klkwe")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_3qoi6"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Aldric Vale"
+dialogue_text = "ลูก...ถึงเวลาที่พ่อจะเล่าความจริงให้เจ้าฟังแล้ว"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_rbnx3"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Edric Vale"
+dialogue_text = "ความจริงเรื่องอะไรครับ?"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_233yf"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Aldric Vale"
+dialogue_text = "หลายปีก่อน พ่อเคยเป็นอัศวินของราชสำนัก...จนได้รู้ว่ากลุ่มอัศวินบางคนกำลังวางแผนยึดอำนาจ"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_mgt3e"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Edric Vale"
+dialogue_text = "แล้วทำไมพ่อถึงไม่หยุดพวกเขา?"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_t58jk"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Aldric Vale"
+dialogue_text = "พ่อพยายามแล้ว...แต่พวกมันหักหลังพ่อ ใส่ความว่าพ่อเป็นคนทรยศ และพรากทุกอย่างไปจากเรา"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_ue85e"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Edric Vale"
+dialogue_text = "แล้วตอนนี้พวกมันยังอยู่?"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_l16xf"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Aldric Vale"
+dialogue_text = "ใช่...และพวกมันยังคงมีอำนาจอยู่ในปราสาท"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_xmwul"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Edric Vale"
+dialogue_text = "ถ้าอย่างนั้น ผมจะจัดการพวกมันเอง"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_lxurl"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Aldric Vale"
+dialogue_text = "อย่าเพิ่งรีบร้อน เจ้าต้องแข็งแกร่งกว่านี้เสียก่อน"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_lcvgs"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Edric Vale"
+dialogue_text = "แล้วผมต้องทำอย่างไร?"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_jvq5y"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Aldric Vale"
+dialogue_text = "ไปพบหญิงคนหนึ่งที่อยู่ไม่ไกลจากหมู่บ้าน นางเคยเป็นนักรบที่เก่งที่สุดคนหนึ่งที่พ่อรู้จัก"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_gdmr1"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Aldric Vale"
+dialogue_text = "จงให้นางฝึกเจ้า...เมื่อเจ้าพร้อม พ่อจะเล่าทุกอย่างที่เหลือให้ฟัง"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_5doyu"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Edric Vale"
+dialogue_text = "ผมจะไม่ทำให้พ่อผิดหวัง"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_lk8ac"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Aldric Vale"
+dialogue_text = "จงจำไว้...อย่าให้ความแค้นควบคุมเจ้า ใช้มันเป็นเหตุผลที่จะลุกขึ้นสู้เพื่อความจริง"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_j36te"]
+script = ExtResource("10_6xevp")
+left_portrait = ExtResource("12_hy5eu")
+right_portrait = ExtResource("13_25sun")
+dialogue_lines = Array[ExtResource("11_5pb6v")]([SubResource("Resource_3qoi6"), SubResource("Resource_rbnx3"), SubResource("Resource_233yf"), SubResource("Resource_mgt3e"), SubResource("Resource_t58jk"), SubResource("Resource_ue85e"), SubResource("Resource_l16xf"), SubResource("Resource_xmwul"), SubResource("Resource_lxurl"), SubResource("Resource_lcvgs"), SubResource("Resource_jvq5y"), SubResource("Resource_gdmr1"), SubResource("Resource_5doyu"), SubResource("Resource_lk8ac")])
+metadata/_custom_type_script = "uid://dgimd832oimtc"
+
+[sub_resource type="Resource" id="Resource_ovfk7"]
+script = ExtResource("11_5pb6v")
+speaker_name = "Aldric Vale"
+dialogue_text = "ไปพบหญิงนักรบเพื่อรับการฝึก"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_it00s"]
+script = ExtResource("10_6xevp")
+left_portrait = ExtResource("12_hy5eu")
+right_portrait = ExtResource("13_25sun")
+dialogue_lines = Array[ExtResource("11_5pb6v")]([SubResource("Resource_ovfk7")])
+metadata/_custom_type_script = "uid://dgimd832oimtc"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahict"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 60.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qgrt0"]
+size = Vector2(33, 409)
+
+[sub_resource type="Gradient" id="Gradient_j3fad"]
+offsets = PackedFloat32Array(0.12650603, 0.36746988, 0.5481928)
+colors = PackedColorArray(0, 0, 0, 1, 0.25882354, 0.25882354, 0.25882354, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_owleh"]
+gradient = SubResource("Gradient_j3fad")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahict"]
+atlas = ExtResource("16_pwmx8")
+region = Rect2(30, 0, 330, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgrt0"]
+atlas = ExtResource("16_pwmx8")
+region = Rect2(0, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owleh"]
+atlas = ExtResource("16_pwmx8")
+region = Rect2(0, 0, 330, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j2inh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahict")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgrt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owleh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_2bs0i")]
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(-678.00006, 425.00003)
+
+[node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("18_xv4d7")]
+limit_right = 870
+
+[node name="ColorRect" type="ColorRect" parent="." index="8" unique_id=2018387552]
+offset_left = -928.0
+offset_top = 544.0
+offset_right = 904.0
+offset_bottom = 616.0
+color = Color(0.07428471, 0.067409925, 0.06282619, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tilee" type="Sprite2D" parent="." index="9" unique_id=1959957785]
+texture_filter = 2
+position = Vector2(0, 488)
+scale = Vector2(1.0558772, 1)
+texture = ExtResource("3_yvjih")
+
+[node name="Para" type="Node2D" parent="." index="10" unique_id=1796012266]
+position = Vector2(1088, 16)
+
+[node name="Parallax2D" type="Parallax2D" parent="Para" index="0" unique_id=1159227723]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="1" type="Sprite2D" parent="Para/Parallax2D" index="0" unique_id=369280273]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("4_1kmru")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Para" index="1" unique_id=568598771]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(1114.85, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 2
+
+[node name="2" type="Sprite2D" parent="Para/Parallax2D2" index="0" unique_id=1647838146]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("5_bv4da")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Para" index="2" unique_id=853828574]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="3" type="Sprite2D" parent="Para/Parallax2D3" index="0" unique_id=345863393]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("6_iy56i")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Para" index="3" unique_id=1056672310]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="4" type="Sprite2D" parent="Para/Parallax2D4" index="0" unique_id=1020352398]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("7_ypnii")
+
+[node name="Npc" parent="." index="11" unique_id=522633972 instance=ExtResource("8_r4e73")]
+z_index = 2
+texture_filter = 1
+position = Vector2(-80, 424.00003)
+scale = Vector2(3.111848, 3.0764527)
+collision_layer = 0
+collision_mask = 7
+npc_name = "Father"
+npc_sprite_frames = SubResource("SpriteFrames_fuhk3")
+npc_scale = 1.5
+dialogue_groups = Array[ExtResource("10_6xevp")]([SubResource("Resource_j36te")])
+final_dialogue = SubResource("Resource_it00s")
+
+[node name="DialogueUi" parent="Npc" index="2" unique_id=1955745153 instance=ExtResource("14_yb1up")]
+
+[node name="Label" type="Label" parent="Npc" index="5" unique_id=953816644]
+texture_filter = 6
+offset_left = -12.854097
+offset_top = -15.602398
+offset_right = 235.1459
+offset_bottom = 39.397602
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("15_5akke")
+theme_override_font_sizes/font_size = 40
+text = "Aldric Vale"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="12" unique_id=127797876]
+position = Vector2(-800, -112)
+sprite_frames = SubResource("SpriteFrames_ahict")
+autoplay = "default"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." index="13" unique_id=832585017]
+position = Vector2(-1804, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" index="0" unique_id=1292700220]
+position = Vector2(896, 328)
+shape = SubResource("RectangleShape2D_qgrt0")
+
+[node name="Panel" type="Panel" parent="." index="14" unique_id=370213578]
+offset_left = -1096.0
+offset_top = -335.99994
+offset_right = -1056.0
+offset_bottom = -295.99994
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Panel" index="0" unique_id=2051341136]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 32.724995
+anchor_top = 0.3
+anchor_right = 32.725
+anchor_bottom = 0.3
+offset_left = 160.00006
+offset_top = 231.99994
+offset_right = 744.00006
+offset_bottom = 967.99994
+scale = Vector2(0.9016295, 1.0221044)
+texture = SubResource("GradientTexture2D_owleh")
+flip_h = true
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel" index="1" unique_id=893466541]
+z_index = 1
+position = Vector2(1791, 766.99994)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_j2inh")
+autoplay = "default"
+frame_progress = 0.67387736
+
+[node name="Tilestarat" type="Sprite2D" parent="." index="15" unique_id=1537332653]
+texture_filter = 1
+position = Vector2(-7, 316)
+texture = ExtResource("22_qw7u0")
+metadata/_edit_lock_ = true
+
+[node name="LevelFinishDoor2" parent="." index="16" unique_id=1136132539 instance=ExtResource("1_pwmx8")]
+z_index = 1
+position = Vector2(922.99994, 48)
+scale = Vector2(2.2863064, 14.454411)
+next_scene = ExtResource("19_owleh")

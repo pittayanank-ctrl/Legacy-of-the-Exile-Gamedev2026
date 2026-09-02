@@ -1,0 +1,473 @@
+[gd_scene format=3 uid="uid://ddf4ivwyrexi4"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_it00s"]
+[ext_resource type="Texture2D" uid="uid://hfdtmcja4sw3" path="res://Assets/BG/nature_4/1.png" id="2_ovfk7"]
+[ext_resource type="Texture2D" uid="uid://brtwu41psu5o2" path="res://Assets/BG/nature_4/2.png" id="3_eqgor"]
+[ext_resource type="Texture2D" uid="uid://ckcnjonvqso6s" path="res://Assets/BG/nature_4/3.png" id="4_b6y0q"]
+[ext_resource type="Texture2D" uid="uid://cdrlwb830yf0l" path="res://Assets/BG/nature_4/4.png" id="5_dx24p"]
+[ext_resource type="Texture2D" uid="uid://ch654vxsx2nkn" path="res://Assets/Tile/tilee.png" id="6_bpk8j"]
+[ext_resource type="PackedScene" uid="uid://dhvmfd7ogyqld" path="res://Scenes/Actors/NPC.tscn" id="7_grac3"]
+[ext_resource type="Texture2D" uid="uid://o275f04p5kah" path="res://Assets/Enemy/Lightning Mage/Idle.png" id="8_it00s"]
+[ext_resource type="Script" uid="uid://dgimd832oimtc" path="res://Scenes/Prefabs/DialogueGroup.gd" id="9_3pq1c"]
+[ext_resource type="Script" uid="uid://cdhi2dfrqh1wr" path="res://Scenes/Prefabs/DialogueLine.gd" id="10_v3kri"]
+[ext_resource type="Texture2D" uid="uid://dx2r3mf23no60" path="res://Assets/Player/heropic.psd.png" id="11_cenkf"]
+[ext_resource type="Texture2D" uid="uid://k5j26hswpiij" path="res://Assets/NPC/npcgirl.png" id="12_it00s"]
+[ext_resource type="PackedScene" uid="uid://cu4uhigoujqbu" path="res://Scenes/Prefabs/DialogueUI.tscn" id="13_hi0fa"]
+[ext_resource type="FontFile" uid="uid://cavnbm5a08lt1" path="res://Assets/Fonts/Cinzel-Medium.ttf" id="14_vrqjw"]
+[ext_resource type="PackedScene" uid="uid://bydbpqt3654kp" path="res://Scenes/Actors/GameCamera.tscn" id="15_8g3x6"]
+[ext_resource type="Texture2D" uid="uid://3xgvkv36ronb" path="res://Assets/NPC/bearded-idle.png" id="15_ovfk7"]
+[ext_resource type="Texture2D" uid="uid://p1l7se778erp" path="res://Assets/NPC/Cat/cat 1.6.png" id="16_eqgor"]
+[ext_resource type="Texture2D" uid="uid://cc0khhrfphcq" path="res://Assets/BG/ee35bfb1-0eef-4b0e-863c-21fbafa4e4ff.png" id="16_ql2l4"]
+[ext_resource type="Texture2D" uid="uid://vkisj3gtcteu" path="res://Assets/NPC/Cat/cat 1.9.png" id="17_b6y0q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgtpb"]
+size = Vector2(33, 409)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it00s"]
+atlas = ExtResource("8_it00s")
+region = Rect2(0, 64, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovfk7"]
+atlas = ExtResource("8_it00s")
+region = Rect2(128, 64, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqgor"]
+atlas = ExtResource("8_it00s")
+region = Rect2(256, 64, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6y0q"]
+atlas = ExtResource("8_it00s")
+region = Rect2(384, 64, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx24p"]
+atlas = ExtResource("8_it00s")
+region = Rect2(512, 64, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpk8j"]
+atlas = ExtResource("8_it00s")
+region = Rect2(640, 64, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grac3"]
+atlas = ExtResource("8_it00s")
+region = Rect2(768, 64, 128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1327f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it00s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovfk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqgor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6y0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx24p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpk8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grac3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_iy56i"]
+script = ExtResource("10_v3kri")
+speaker_name = "Elena"
+dialogue_text = "เจ้าคือคนที่ Aldric ส่งมาสินะ?"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_ovfk7"]
+script = ExtResource("10_v3kri")
+speaker_name = "Edric Vale"
+dialogue_text = "ใช่ครับ พ่อบอกว่าท่านสามารถฝึกผมได้"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_eqgor"]
+script = ExtResource("10_v3kri")
+speaker_name = "Elena"
+dialogue_text = "ข้ารู้เรื่องของพ่อเจ้า...และรู้ด้วยว่าเหตุใดเจ้าถึงมาที่นี่"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_b6y0q"]
+script = ExtResource("10_v3kri")
+speaker_name = "Edric Vale"
+dialogue_text = "ผมต้องการแข็งแกร่งขึ้น เพื่อจัดการกับพวกอัศวินที่หักหลังพ่อ"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_dx24p"]
+script = ExtResource("10_v3kri")
+speaker_name = "Elena"
+dialogue_text = "ความแค้นเพียงอย่างเดียวไม่ทำให้เจ้าชนะหรอก มันมีแต่จะทำให้เจ้าประมาท"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_bpk8j"]
+script = ExtResource("10_v3kri")
+speaker_name = "Edric Vale"
+dialogue_text = "แล้วผมต้องทำอย่างไร?"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_grac3"]
+script = ExtResource("10_v3kri")
+speaker_name = "Elena"
+dialogue_text = "เรียนรู้ที่จะควบคุมดาบ ป้องกันการโจมตี และรู้ว่าเมื่อใดควรสู้...เมื่อใดควรถอย"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_gnyrb"]
+script = ExtResource("10_v3kri")
+speaker_name = "Edric Vale"
+dialogue_text = "ถ้าอย่างนั้น...ได้โปรดฝึกผมด้วยครับ"
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_iyyfr"]
+script = ExtResource("9_3pq1c")
+left_portrait = ExtResource("11_cenkf")
+right_portrait = ExtResource("12_it00s")
+dialogue_lines = Array[ExtResource("10_v3kri")]([SubResource("Resource_iy56i"), SubResource("Resource_ovfk7"), SubResource("Resource_eqgor"), SubResource("Resource_b6y0q"), SubResource("Resource_dx24p"), SubResource("Resource_bpk8j"), SubResource("Resource_grac3"), SubResource("Resource_gnyrb")])
+metadata/_custom_type_script = "uid://dgimd832oimtc"
+
+[sub_resource type="Resource" id="Resource_3pq1c"]
+script = ExtResource("10_v3kri")
+speaker_name = "Elena"
+dialogue_text = "ดี งั้นจับดาบให้มั่น แล้วตามข้ามา"
+speaker_side = 1
+metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
+
+[sub_resource type="Resource" id="Resource_j3fad"]
+script = ExtResource("9_3pq1c")
+left_portrait = ExtResource("11_cenkf")
+right_portrait = ExtResource("12_it00s")
+dialogue_lines = Array[ExtResource("10_v3kri")]([SubResource("Resource_3pq1c")])
+metadata/_custom_type_script = "uid://dgimd832oimtc"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnyrb"]
+atlas = ExtResource("15_ovfk7")
+region = Rect2(0, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pq1c"]
+atlas = ExtResource("15_ovfk7")
+region = Rect2(40, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3kri"]
+atlas = ExtResource("15_ovfk7")
+region = Rect2(80, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cenkf"]
+atlas = ExtResource("15_ovfk7")
+region = Rect2(120, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_diwrw"]
+atlas = ExtResource("15_ovfk7")
+region = Rect2(160, 0, 40, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j2inh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnyrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pq1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3kri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cenkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_diwrw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi0fa"]
+atlas = ExtResource("16_eqgor")
+region = Rect2(0, 1120, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrqjw"]
+atlas = ExtResource("16_eqgor")
+region = Rect2(32, 1120, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g3x6"]
+atlas = ExtResource("16_eqgor")
+region = Rect2(64, 1120, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql2l4"]
+atlas = ExtResource("16_eqgor")
+region = Rect2(96, 1120, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgtpb"]
+atlas = ExtResource("16_eqgor")
+region = Rect2(128, 1120, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1327f"]
+atlas = ExtResource("16_eqgor")
+region = Rect2(160, 1120, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggcv6"]
+atlas = ExtResource("16_eqgor")
+region = Rect2(192, 1120, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj0lv"]
+atlas = ExtResource("16_eqgor")
+region = Rect2(224, 1120, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kxh35"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi0fa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrqjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8g3x6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ql2l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgtpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1327f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggcv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aj0lv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwu4m"]
+atlas = ExtResource("17_b6y0q")
+region = Rect2(0, 1152, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03seb"]
+atlas = ExtResource("17_b6y0q")
+region = Rect2(32, 1152, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eijgx"]
+atlas = ExtResource("17_b6y0q")
+region = Rect2(64, 1152, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6qmk"]
+atlas = ExtResource("17_b6y0q")
+region = Rect2(96, 1152, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vhjx"]
+atlas = ExtResource("17_b6y0q")
+region = Rect2(128, 1152, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cc7pl"]
+atlas = ExtResource("17_b6y0q")
+region = Rect2(160, 1152, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekwdo"]
+atlas = ExtResource("17_b6y0q")
+region = Rect2(192, 1152, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8aql1"]
+atlas = ExtResource("17_b6y0q")
+region = Rect2(224, 1152, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxnjm"]
+atlas = ExtResource("17_b6y0q")
+region = Rect2(256, 1152, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_npl5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwu4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03seb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eijgx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6qmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vhjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cc7pl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekwdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8aql1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxnjm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_it00s")]
+
+[node name="Para" type="Node2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=905758042]
+position = Vector2(1088, 16)
+
+[node name="Parallax2D" type="Parallax2D" parent="Level/Para" index="0" unique_id=879706016]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="1" type="Sprite2D" parent="Level/Para/Parallax2D" index="0" unique_id=1657404136]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("2_ovfk7")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Level/Para" index="1" unique_id=1986035529]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(1114.85, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 2
+
+[node name="2" type="Sprite2D" parent="Level/Para/Parallax2D2" index="0" unique_id=133514205]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("3_eqgor")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Level/Para" index="2" unique_id=1445171923]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="3" type="Sprite2D" parent="Level/Para/Parallax2D3" index="0" unique_id=2122782117]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("4_b6y0q")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Level/Para" index="3" unique_id=1255639050]
+scroll_scale = Vector2(0.3, 0)
+repeat_size = Vector2(1114.85, 0)
+repeat_times = 2
+
+[node name="4" type="Sprite2D" parent="Level/Para/Parallax2D4" index="0" unique_id=1291646387]
+z_index = -1
+position = Vector2(-346.45166, 226.2668)
+scale = Vector2(1.9359317, 1.5448568)
+texture = ExtResource("5_dx24p")
+
+[node name="Tilee2" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=328702873]
+texture_filter = 2
+position = Vector2(203, 479.99997)
+scale = Vector2(1.298639, 1.6910568)
+texture = ExtResource("6_bpk8j")
+
+[node name="Tilee3" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=1557863504]
+texture_filter = 2
+position = Vector2(202.62488, 501)
+scale = Vector2(1.298639, 1.6910568)
+texture = ExtResource("6_bpk8j")
+
+[node name="Tilee" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=1568043141]
+texture_filter = 2
+position = Vector2(210.12498, 488)
+scale = Vector2(1.2992183, 1)
+texture = ExtResource("6_bpk8j")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="6" unique_id=1271893714]
+position = Vector2(-909, 302)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/CharacterBody2D" index="0" unique_id=1745074460]
+shape = SubResource("RectangleShape2D_xgtpb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/CharacterBody2D" index="1" unique_id=508183913]
+position = Vector2(2197, 6)
+shape = SubResource("RectangleShape2D_xgtpb")
+
+[node name="Npc" type="Node2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="7" unique_id=809952813]
+
+[node name="Npc2" parent="Level/Npc" index="0" unique_id=1400630172 instance=ExtResource("7_grac3")]
+z_index = 4
+texture_filter = 1
+position = Vector2(404, 424)
+scale = Vector2(3.111848, 3.0764527)
+collision_layer = 0
+collision_mask = 7
+npc_name = "Father"
+npc_sprite_frames = SubResource("SpriteFrames_1327f")
+dialogue_groups = Array[ExtResource("9_3pq1c")]([SubResource("Resource_iyyfr")])
+final_dialogue = SubResource("Resource_j3fad")
+change_scene_after_dialogue = true
+next_scene = "uid://b2cqwn84sfwco"
+
+[node name="DialogueUi" parent="Level/Npc/Npc2" index="2" unique_id=1955745153 instance=ExtResource("13_hi0fa")]
+
+[node name="Label" type="Label" parent="Level/Npc/Npc2" index="5" unique_id=1842039725]
+texture_filter = 6
+offset_left = -12.854097
+offset_top = -15.602398
+offset_right = 235.1459
+offset_bottom = 39.397602
+scale = Vector2(0.1, 0.1)
+theme_override_fonts/font = ExtResource("14_vrqjw")
+theme_override_font_sizes/font_size = 40
+text = "Elena"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level/Npc" index="1" unique_id=1106446911]
+z_index = 1
+position = Vector2(23, 423)
+scale = Vector2(-1.65, 1.415)
+sprite_frames = SubResource("SpriteFrames_j2inh")
+autoplay = "default"
+frame_progress = 0.3961621
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Level/Npc" index="2" unique_id=925918751]
+z_index = 1
+position = Vector2(-23, 364)
+sprite_frames = SubResource("SpriteFrames_kxh35")
+autoplay = "default"
+frame_progress = 0.37157214
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Level/Npc" index="3" unique_id=1643438420]
+z_index = 1
+position = Vector2(20, 362)
+sprite_frames = SubResource("SpriteFrames_npl5c")
+autoplay = "default"
+frame_progress = 0.64264685
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(-720.00006, 425)
+
+[node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("15_8g3x6")]
+limit_right = 1267
+
+[node name="Ee35Bfb10Eef4b0e863c21Fbafa4e4Ff" type="Sprite2D" parent="." index="8" unique_id=667837342]
+position = Vector2(193, 210)
+scale = Vector2(1, 0.7776243)
+texture = ExtResource("16_ql2l4")
