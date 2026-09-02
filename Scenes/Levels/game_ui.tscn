@@ -102,6 +102,7 @@ theme_override_fonts/font = ExtResource("2_oo7xa")
 text = "STAMINA"
 
 [node name="PauseUI" type="Control" parent="." unique_id=1659750234]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -180,7 +181,6 @@ sprite_frames = SubResource("SpriteFrames_i416g")
 animation = &"off"
 
 [node name="OverUI" type="Control" parent="." unique_id=652341151]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
