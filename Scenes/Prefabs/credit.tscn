@@ -93,9 +93,9 @@ theme = ExtResource("1_2g1tp")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_4nn8d")
 theme_override_font_sizes/font_size = 16
-text = "1. 673380319-1 ธนพล สุขเสริม
-2. 673380331-1 พิชชาอร ณ นครพนม
-3. 673380525-8 พิทยนันท์ กัญญะลา"
+text = "1. 673380319-1 Thanaphon Sukserm
+2. 673380331-1 Pitchaon Na Nakhonphanom
+3. 673380525-8 Pittayanan Kanyala"
 vertical_alignment = 1
 
 [node name="btnExit" parent="Control" unique_id=1633606001 instance=ExtResource("3_fnvqj")]
