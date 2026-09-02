@@ -175,15 +175,11 @@ max_hp = 250
 position = Vector2(648, 424)
 max_hp = 250
 
-[node name="UserInterface" parent="." index="5" unique_id=1799764374]
-visible = false
-
-[node name="Label" parent="UserInterface" index="3" unique_id=1103718868]
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
 offset_left = -99.0
 offset_top = -39.5
 offset_right = 99.0
 offset_bottom = 39.5
-theme_override_colors/font_color = Color(0.5529412, 0.38431373, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 text = "Whispering Woods"

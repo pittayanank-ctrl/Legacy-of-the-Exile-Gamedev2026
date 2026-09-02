@@ -292,8 +292,13 @@ position = Vector2(-691.00006, 427)
 [node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("3_n5jy4")]
 limit_right = 870
 
+<<<<<<< HEAD
 [node name="MusicPlayer" parent="." index="7" unique_id=724032201]
 stream = null
+=======
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
+text = "The Exile's Home"
+>>>>>>> f708e2897fb49a3001eec8daa7520868394c9bad
 
 [node name="Tilee" type="Sprite2D" parent="." index="8" unique_id=658583738]
 texture_filter = 2

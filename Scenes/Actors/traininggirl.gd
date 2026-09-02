@@ -97,6 +97,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 
 	if is_dead:
+		sprite.play("Dead")
 		return
 
 	if player == null:
@@ -217,6 +218,9 @@ func combat() -> void:
 
 func attack() -> void:
 
+	if is_dead:
+		return
+
 	if is_attacking:
 		return
 
@@ -233,20 +237,21 @@ func attack() -> void:
 	# ATTACK 1
 	# =========================
 
-	sprite.play("Attack_1")
-
-	await get_tree().create_timer(1.0).timeout
-
 	if is_dead:
 		return
 
-	if is_hurt:
-		is_attacking = false
-		can_attack = true
-		return
+	sprite.play("Attack_1")
 
 	check_attack_hit()
 
+	await get_tree().create_timer(1.0).timeout
+
+	# =========================
+	# CHECK DEAD
+	# =========================
+
+	if is_dead:
+		return
 
 	# =========================
 	# ATTACK 2
@@ -254,28 +259,35 @@ func attack() -> void:
 
 	sprite.play("Attack_2")
 
+	check_attack_hit()
+
 	await get_tree().create_timer(0.4).timeout
+
+	# =========================
+	# CHECK DEAD
+	# =========================
 
 	if is_dead:
 		return
 
-	if is_hurt:
-		is_attacking = false
-		can_attack = true
-		return
-
-	check_attack_hit()
-
-
 	# =========================
-	# IDLE
+	# END ATTACK
 	# =========================
 
 	is_attacking = false
-	can_attack = true
-
 	state = State.IDLE
+
+	if is_dead:
+		return
+
 	sprite.play("Idle")
+
+	await get_tree().create_timer(attack_cooldown).timeout
+
+	if is_dead:
+		return
+
+	can_attack = true
 
 
 # =========================
@@ -550,14 +562,20 @@ func die() -> void:
 	# PLAY DEAD
 	# =========================
 
-	# ป้องกัน Dead เป็น Loop
 	if sprite.sprite_frames.has_animation("Dead"):
 		sprite.sprite_frames.set_animation_loop("Dead", false)
 
+	# หยุด Attack ที่กำลังเล่นอยู่
 	sprite.stop()
+
+	# เริ่ม Dead ตั้งแต่เฟรมแรก
+	sprite.frame = 0
 	sprite.play("Dead")
 
-	# หยุด Physics ของ Enemy
+	# =========================
+	# STOP PHYSICS
+	# =========================
+
 	set_physics_process(false)
 
 

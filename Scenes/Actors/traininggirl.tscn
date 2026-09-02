@@ -439,7 +439,7 @@ texture_filter = 1
 position = Vector2(7, -13)
 scale = Vector2(0.5, 0.439)
 sprite_frames = SubResource("SpriteFrames_hju2s")
-animation = &"Defend"
+animation = &"Attack_2"
 
 [node name="AttackArea" type="Area2D" parent="BodyVisual" unique_id=863962173]
 collision_layer = 16
@@ -454,5 +454,23 @@ shape = SubResource("RectangleShape2D_kxh35")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BodyVisual/DetectionArea" unique_id=764323263]
 position = Vector2(1, -25)
 shape = SubResource("RectangleShape2D_j2inh")
+
+[node name="Control" type="Control" parent="." unique_id=1229344075]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 28.5
+scale = Vector2(0.27464718, 0.39495605)
+
+[node name="Label" type="Label" parent="Control" unique_id=1854073767]
+layout_mode = 0
+offset_left = -77.0
+offset_top = -34.5
+offset_right = 79.0
+offset_bottom = -12.5
+theme_override_font_sizes/font_size = 16
+text = "Elena"
+horizontal_alignment = 1
 
 [connection signal="animation_finished" from="BodyVisual/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
