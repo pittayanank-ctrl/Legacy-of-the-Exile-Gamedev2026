@@ -21,8 +21,8 @@ config/tags=PackedStringArray("2d", "framework", "platformer", "starterkit")
 run/main_scene="uid://cvmoaxjkhykyg"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/stretch_mode=4
-boot_splash/image="res://Assets/Splash/splash.png"
-config/icon="uid://xeh8sn4tfl0r"
+boot_splash/image="uid://c3jpnsnyjky1p"
+config/icon="uid://d4lmer4ewoxb4"
 boot_splash/minimum_display_time=500
 
 [audio]
