@@ -14,27 +14,27 @@
 [sub_resource type="Resource" id="Resource_gh1ak"]
 script = ExtResource("5_bnwiu")
 speaker_name = "King Alaric III"
-dialogue_text = "ขอบใจเจ้ามาก... หากไม่ได้เจ้า ข้าคงไม่มีวันได้กลับมา"
+dialogue_text = "My thanks to you... Without you, I never would have made it back."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_yf0wp"]
 script = ExtResource("5_bnwiu")
 speaker_name = "Edric Vale"
-dialogue_text = "ยังมีเรื่องที่ข้าต้องรู้... เรื่องอดีตของครอบครัวข้า"
+dialogue_text = "There are still truths I have yet to uncover... about my family's past."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_smdyq"]
 script = ExtResource("5_bnwiu")
 speaker_name = "King Alaric III"
-dialogue_text = "ข้ารู้ว่าเจ้าต้องการคำตอบ และข้าจะบอกทุกอย่าง"
+dialogue_text = "I know you need answers... and you shall have them all."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_hthrd"]
 script = ExtResource("5_bnwiu")
 speaker_name = "Edric Vale"
-dialogue_text = "เช่นนั้น... กลับไปกับข้าเถอะ"
+dialogue_text = "Then... come back with me."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_jgvqw"]
@@ -47,14 +47,14 @@ metadata/_custom_type_script = "uid://dgimd832oimtc"
 [sub_resource type="Resource" id="Resource_8kjy3"]
 script = ExtResource("5_bnwiu")
 speaker_name = "King Alaric III"
-dialogue_text = "ไปหาพ่อของเจ้าสินะ"
+dialogue_text = "To see Aldric once more, is it?"
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_aioe2"]
 script = ExtResource("5_bnwiu")
 speaker_name = "Edric Vale"
-dialogue_text = "ใช่ ถึงเวลาที่ทุกคนจะต้องพูดความจริงเสียที"
+dialogue_text = "Yes. It is time everyone spoke the truth at last."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_bnwiu"]
@@ -169,3 +169,6 @@ scale = Vector2(2.224081, 2.3218932)
 
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
 text = "The Royal Throne"
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = null

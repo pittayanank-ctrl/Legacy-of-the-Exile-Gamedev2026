@@ -83,52 +83,52 @@ animations = [{
 [sub_resource type="Resource" id="Resource_iy56i"]
 script = ExtResource("10_v3kri")
 speaker_name = "Elena"
-dialogue_text = "เจ้าคือคนที่ Aldric ส่งมาสินะ?"
+dialogue_text = "So... you're the one Aldric sent, aren't you?"
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_ovfk7"]
 script = ExtResource("10_v3kri")
 speaker_name = "Edric Vale"
-dialogue_text = "ใช่ครับ พ่อบอกว่าท่านสามารถฝึกผมได้"
+dialogue_text = "Yes. Father told me you were the one who could teach me."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_eqgor"]
 script = ExtResource("10_v3kri")
 speaker_name = "Elena"
-dialogue_text = "ข้ารู้เรื่องของพ่อเจ้า...และรู้ด้วยว่าเหตุใดเจ้าถึงมาที่นี่"
+dialogue_text = "I know what happened to Aldric... and I know what brings you to me."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_b6y0q"]
 script = ExtResource("10_v3kri")
 speaker_name = "Edric Vale"
-dialogue_text = "ผมต้องการแข็งแกร่งขึ้น เพื่อจัดการกับพวกอัศวินที่หักหลังพ่อ"
+dialogue_text = "I need to become stronger... strong enough to deal with the knights who betrayed my father."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_dx24p"]
 script = ExtResource("10_v3kri")
 speaker_name = "Elena"
-dialogue_text = "ความแค้นเพียงอย่างเดียวไม่ทำให้เจ้าชนะหรอก มันมีแต่จะทำให้เจ้าประมาท"
+dialogue_text = "Vengeance alone will not grant you victory. It will only breed recklessness."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_bpk8j"]
 script = ExtResource("10_v3kri")
 speaker_name = "Edric Vale"
-dialogue_text = "แล้วผมต้องทำอย่างไร?"
+dialogue_text = "Then what must I do?"
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_grac3"]
 script = ExtResource("10_v3kri")
 speaker_name = "Elena"
-dialogue_text = "เรียนรู้ที่จะควบคุมดาบ ป้องกันการโจมตี และรู้ว่าเมื่อใดควรสู้...เมื่อใดควรถอย"
+dialogue_text = "Learn to command your blade. Defend your ground, and know when to strike... and when to retreat."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_gnyrb"]
 script = ExtResource("10_v3kri")
 speaker_name = "Edric Vale"
-dialogue_text = "ถ้าอย่างนั้น...ได้โปรดฝึกผมด้วยครับ"
+dialogue_text = "Then... please, train me."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_iyyfr"]
@@ -141,7 +141,7 @@ metadata/_custom_type_script = "uid://dgimd832oimtc"
 [sub_resource type="Resource" id="Resource_3pq1c"]
 script = ExtResource("10_v3kri")
 speaker_name = "Elena"
-dialogue_text = "ดี งั้นจับดาบให้มั่น แล้วตามข้ามา"
+dialogue_text = "Good. Firm your grip on your blade, and follow me."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
@@ -469,6 +469,9 @@ limit_right = 1267
 
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
 text = "Forgotten Village"
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = null
 
 [node name="Ee35Bfb10Eef4b0e863c21Fbafa4e4Ff" type="Sprite2D" parent="." index="8" unique_id=667837342]
 position = Vector2(193, 210)

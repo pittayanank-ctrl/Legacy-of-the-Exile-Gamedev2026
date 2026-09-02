@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ckcnjonvqso6s" path="res://Assets/BG/nature_4/3.png" id="7_lryru"]
 [ext_resource type="Texture2D" uid="uid://cdrlwb830yf0l" path="res://Assets/BG/nature_4/4.png" id="8_ekvg5"]
 [ext_resource type="PackedScene" uid="uid://dhvmfd7ogyqld" path="res://Scenes/Actors/NPC.tscn" id="9_go1ur"]
-[ext_resource type="Texture2D" uid="uid://lc7j3q0snxct" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="10_i2uy6"]
+[ext_resource type="Texture2D" uid="uid://syri776v2etj" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="10_i2uy6"]
 [ext_resource type="Script" uid="uid://dgimd832oimtc" path="res://Scenes/Prefabs/DialogueGroup.gd" id="11_7e27o"]
 [ext_resource type="Script" uid="uid://cdhi2dfrqh1wr" path="res://Scenes/Prefabs/DialogueLine.gd" id="12_culcw"]
 [ext_resource type="Texture2D" uid="uid://dx2r3mf23no60" path="res://Assets/Player/heropic.psd.png" id="13_uoe4u"]
@@ -116,14 +116,14 @@ animations = [{
 [sub_resource type="Resource" id="Resource_n5jy4"]
 script = ExtResource("12_culcw")
 speaker_name = "King Alaric III"
-dialogue_text = "ในที่สุด... เราก็ได้พบกันอีกครั้ง"
+dialogue_text = "At last... I stand face-to-face with you once more."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_ewk7j"]
 script = ExtResource("12_culcw")
 speaker_name = "Aldric Vale"
-dialogue_text = "ข้าไม่คิดว่าจะมีวันที่ได้เห็นท่านกลับมายืนอยู่ที่นี่อีก"
+dialogue_text = "I never thought I would live to see the day you stood here again."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_j36te"]
@@ -136,14 +136,14 @@ metadata/_custom_type_script = "uid://dgimd832oimtc"
 [sub_resource type="Resource" id="Resource_oef4l"]
 script = ExtResource("12_culcw")
 speaker_name = "Edric Vale"
-dialogue_text = "พ่อ... ท่านสองคนรู้จักกันมาก่อนงั้นหรือ?"
+dialogue_text = "Father... did the two of you know each other?"
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_lryru"]
 script = ExtResource("12_culcw")
 speaker_name = "Aldric Vale"
-dialogue_text = "ใช่... พระองค์คือคนที่ข้าเคยสาบานว่าจะปกป้อง แต่ทุกอย่างกลับพังทลายลงเพราะกลุ่มอัศวินที่กระหายอำนาจ"
+dialogue_text = "Yes... he was the one I once swore to protect. But everything crumbled because of those power-hungry knights."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_jwlcv"]
@@ -156,14 +156,14 @@ metadata/_custom_type_script = "uid://dgimd832oimtc"
 [sub_resource type="Resource" id="Resource_11rhl"]
 script = ExtResource("12_culcw")
 speaker_name = "King Alaric III"
-dialogue_text = "ข้าสูญเสียทั้งอาณาจักร... และคิดว่าเจ้าคงตายไปแล้ว"
+dialogue_text = "I lost an entire kingdom... and I truly believed you had perished."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_ekvg5"]
 script = ExtResource("12_culcw")
 speaker_name = "Aldric Vale"
-dialogue_text = "ข้าหนีมาเพื่อปกป้องลูกของข้า และเก็บความจริงทั้งหมดไว้กับตัวเอง"
+dialogue_text = "I fled to protect my child, and kept the whole truth to myself."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_w7vtg"]
@@ -176,20 +176,20 @@ metadata/_custom_type_script = "uid://dgimd832oimtc"
 [sub_resource type="Resource" id="Resource_i2uy6"]
 script = ExtResource("12_culcw")
 speaker_name = "Edric Vale"
-dialogue_text = "ตลอดเวลาที่ผ่านมา... ข้าคิดว่าข้าต้องแก้แค้นให้พ่อ"
+dialogue_text = "All this time... I thought I was fighting to avenge you."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_7e27o"]
 script = ExtResource("12_culcw")
 speaker_name = "Aldric Vale"
-dialogue_text = "และตอนนี้เจ้าก็ได้ทำมันแล้ว"
+dialogue_text = "And now, you have done it."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_culcw"]
 script = ExtResource("12_culcw")
 speaker_name = "Edric Vale"
-dialogue_text = "แต่ข้าเพิ่งรู้ว่า... การแก้แค้นไม่ได้ทำให้สิ่งที่เสียไปกลับคืนมา"
+dialogue_text = "But I've only just realized... vengeance won't bring back what was lost."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_go1ur"]
@@ -202,14 +202,14 @@ metadata/_custom_type_script = "uid://dgimd832oimtc"
 [sub_resource type="Resource" id="Resource_fpfjg"]
 script = ExtResource("12_culcw")
 speaker_name = "King Alaric III"
-dialogue_text = "เช่นนั้นก็วางดาบลงเถิด"
+dialogue_text = "Then lay down your sword."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_ix6dm"]
 script = ExtResource("12_culcw")
 speaker_name = "Aldric Vale"
-dialogue_text = "ความแค้นจบลงแล้ว ลูกพ่อ"
+dialogue_text = "The vengeance is over, my son."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_uoe4u"]
@@ -222,13 +222,13 @@ metadata/_custom_type_script = "uid://dgimd832oimtc"
 [sub_resource type="Resource" id="Resource_xspei"]
 script = ExtResource("12_culcw")
 speaker_name = "Edric Vale"
-dialogue_text = "งั้น... จากนี้ไป เราก็เริ่มต้นชีวิตใหม่ได้แล้วใช่ไหม?"
+dialogue_text = "So... from now on, we can start anew, can't we?"
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_2be47"]
 script = ExtResource("12_culcw")
 speaker_name = "Aldric Vale"
-dialogue_text = "ใช่... กลับบ้านของเรากันเถอะ"
+dialogue_text = "Yes, my son... let us finally go home."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
@@ -242,7 +242,7 @@ metadata/_custom_type_script = "uid://dgimd832oimtc"
 [sub_resource type="Resource" id="Resource_ovfk7"]
 script = ExtResource("12_culcw")
 speaker_name = "King Alaric III"
-dialogue_text = "หลังจากวันนี้ ไม่มีใครต้องหนีจากอดีตอีกต่อไป"
+dialogue_text = "After today, no one has to run from the past ever again."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
@@ -291,6 +291,9 @@ position = Vector2(-691.00006, 427)
 
 [node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("3_n5jy4")]
 limit_right = 870
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = null
 
 [node name="Tilee" type="Sprite2D" parent="." index="8" unique_id=658583738]
 texture_filter = 2

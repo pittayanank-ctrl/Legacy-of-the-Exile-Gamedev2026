@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ckcnjonvqso6s" path="res://Assets/BG/nature_4/3.png" id="6_iy56i"]
 [ext_resource type="Texture2D" uid="uid://cdrlwb830yf0l" path="res://Assets/BG/nature_4/4.png" id="7_ypnii"]
 [ext_resource type="PackedScene" uid="uid://dhvmfd7ogyqld" path="res://Scenes/Actors/NPC.tscn" id="8_r4e73"]
-[ext_resource type="Texture2D" uid="uid://lc7j3q0snxct" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="9_1ngce"]
+[ext_resource type="Texture2D" uid="uid://syri776v2etj" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="9_1ngce"]
 [ext_resource type="Script" uid="uid://dgimd832oimtc" path="res://Scenes/Prefabs/DialogueGroup.gd" id="10_6xevp"]
 [ext_resource type="Script" uid="uid://cdhi2dfrqh1wr" path="res://Scenes/Prefabs/DialogueLine.gd" id="11_5pb6v"]
 [ext_resource type="Texture2D" uid="uid://dx2r3mf23no60" path="res://Assets/Player/heropic.psd.png" id="12_hy5eu"]
@@ -66,92 +66,92 @@ animations = [{
 [sub_resource type="Resource" id="Resource_3qoi6"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Aldric Vale"
-dialogue_text = "ลูก...ถึงเวลาที่พ่อจะเล่าความจริงให้เจ้าฟังแล้ว"
+dialogue_text = "My child... the time has come for me to tell you the truth."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_rbnx3"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Edric Vale"
-dialogue_text = "ความจริงเรื่องอะไรครับ?"
+dialogue_text = "What truth, Father?"
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_233yf"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Aldric Vale"
-dialogue_text = "หลายปีก่อน พ่อเคยเป็นอัศวินของราชสำนัก...จนได้รู้ว่ากลุ่มอัศวินบางคนกำลังวางแผนยึดอำนาจ"
+dialogue_text = "Years ago, I was a knight in the king's guard... until I found out that a group of knights was planning to take over."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_mgt3e"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Edric Vale"
-dialogue_text = "แล้วทำไมพ่อถึงไม่หยุดพวกเขา?"
+dialogue_text = "Then why didn't you stop them, Father?"
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_t58jk"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Aldric Vale"
-dialogue_text = "พ่อพยายามแล้ว...แต่พวกมันหักหลังพ่อ ใส่ความว่าพ่อเป็นคนทรยศ และพรากทุกอย่างไปจากเรา"
+dialogue_text = "I tried, my child... but they betrayed me. They framed me as a traitor, and took everything from us."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_ue85e"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Edric Vale"
-dialogue_text = "แล้วตอนนี้พวกมันยังอยู่?"
+dialogue_text = "And they still walk free... after everything they did?"
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_l16xf"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Aldric Vale"
-dialogue_text = "ใช่...และพวกมันยังคงมีอำนาจอยู่ในปราสาท"
+dialogue_text = "Yes... and they still hold power within the castle walls."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_xmwul"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Edric Vale"
-dialogue_text = "ถ้าอย่างนั้น ผมจะจัดการพวกมันเอง"
+dialogue_text = "Then leave them to me."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_lxurl"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Aldric Vale"
-dialogue_text = "อย่าเพิ่งรีบร้อน เจ้าต้องแข็งแกร่งกว่านี้เสียก่อน"
+dialogue_text = "Don't be rash. You must become stronger first."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_lcvgs"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Edric Vale"
-dialogue_text = "แล้วผมต้องทำอย่างไร?"
+dialogue_text = "Then what should I do, Father?"
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_jvq5y"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Aldric Vale"
-dialogue_text = "ไปพบหญิงคนหนึ่งที่อยู่ไม่ไกลจากหมู่บ้าน นางเคยเป็นนักรบที่เก่งที่สุดคนหนึ่งที่พ่อรู้จัก"
+dialogue_text = "Find the woman living near the village. She used to be one of the best warriors I knew."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_gdmr1"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Aldric Vale"
-dialogue_text = "จงให้นางฝึกเจ้า...เมื่อเจ้าพร้อม พ่อจะเล่าทุกอย่างที่เหลือให้ฟัง"
+dialogue_text = "Let her train you. When you are ready, I will tell you everything else."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_5doyu"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Edric Vale"
-dialogue_text = "ผมจะไม่ทำให้พ่อผิดหวัง"
+dialogue_text = "I won't disappoint you, Father."
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
 [sub_resource type="Resource" id="Resource_lk8ac"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Aldric Vale"
-dialogue_text = "จงจำไว้...อย่าให้ความแค้นควบคุมเจ้า ใช้มันเป็นเหตุผลที่จะลุกขึ้นสู้เพื่อความจริง"
+dialogue_text = "Remember... don't let revenge control you. Use it as fuel to fight for the truth."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
@@ -165,7 +165,7 @@ metadata/_custom_type_script = "uid://dgimd832oimtc"
 [sub_resource type="Resource" id="Resource_ovfk7"]
 script = ExtResource("11_5pb6v")
 speaker_name = "Aldric Vale"
-dialogue_text = "ไปพบหญิงนักรบเพื่อรับการฝึก"
+dialogue_text = "First, I need to find this warrior woman... and get stronger."
 speaker_side = 1
 metadata/_custom_type_script = "uid://cdhi2dfrqh1wr"
 
@@ -233,6 +233,9 @@ limit_right = 870
 
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
 text = "The Exile's Home"
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = null
 
 [node name="ColorRect" type="ColorRect" parent="." index="8" unique_id=2018387552]
 offset_left = -928.0
