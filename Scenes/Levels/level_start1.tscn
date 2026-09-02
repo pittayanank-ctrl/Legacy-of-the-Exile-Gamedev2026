@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ckcnjonvqso6s" path="res://Assets/BG/nature_4/3.png" id="6_iy56i"]
 [ext_resource type="Texture2D" uid="uid://cdrlwb830yf0l" path="res://Assets/BG/nature_4/4.png" id="7_ypnii"]
 [ext_resource type="PackedScene" uid="uid://dhvmfd7ogyqld" path="res://Scenes/Actors/NPC.tscn" id="8_r4e73"]
-[ext_resource type="Texture2D" uid="uid://syri776v2etj" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="9_1ngce"]
+[ext_resource type="Texture2D" uid="uid://lc7j3q0snxct" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="9_1ngce"]
 [ext_resource type="Script" uid="uid://dgimd832oimtc" path="res://Scenes/Prefabs/DialogueGroup.gd" id="10_6xevp"]
 [ext_resource type="Script" uid="uid://cdhi2dfrqh1wr" path="res://Scenes/Prefabs/DialogueLine.gd" id="11_5pb6v"]
 [ext_resource type="Texture2D" uid="uid://dx2r3mf23no60" path="res://Assets/Player/heropic.psd.png" id="12_hy5eu"]
