@@ -1,91 +1,82 @@
-# 2D Platformer Starter Kit
+# Legacy of the Exile
 
-This starter kit provides all the essential mechanics needed to build a complete 2D platformer game in Godot 4.7. It is designed as a hands-on learning resource for students taking the **Computer Game Development** course at the **College of Computing, Khon Kaen University**.
+**Legacy of the Exile** is a 2D side-scrolling action game developed as part of the **Computer Game Development** course at the **College of Computing, Khon Kaen University**.
+
+The game is set in a medieval fantasy world where the protagonist becomes involved in a story of conflict, loyalty, and revenge. Players will explore villages, forests, cities, and castles while fighting enemies and progressing through the story.
 
 ## Preview
 
-<img src="docs/qrcode.png" style="width:300px;" />
-
-- [Game Preview](https://computingkku.github.io/2D-Platformer-Starter-Kit/)
-
+![Legacy of the Exile](docs/preview.png)
 
 ## Features
 
-- **Game Menu** — A simple main menu scene (`Menu.tscn`) with Start and Exit options, so players can launch into the game or quit cleanly.
-- **Mobile & Web Design** — On-screen touch controls are included, allowing the game to be played on phones, tablets, and browsers without a keyboard.
-- **Platformer Controller** — Responsive horizontal movement and jumping with double jump support, configurable directly from the Godot Inspector.
-- **Weapon System** — Shoot fireball projectiles with physics-based bouncing and a configurable lifetime. Bullets can defeat enemies and add to the player's score.
-- **Enemy AI** — Enemies patrol the level, reverse direction on walls, and detect the player using raycasting. They can be defeated with bullets.
-- **Enemy Spawner** — A reusable spawner that generates enemies over time with configurable speed, respawn delay, and maximum instance limits.
-- **Animated Player** — Idle, walk, jump, and attack animations driven by state logic; sprite flips automatically based on movement direction.
-- **Particle Effects** — Running particle trails, death particles, and damage feedback (red flash) for juicier game feel.
-- **Damage & Health System** — Player takes damage on enemy contact with knockback and temporary invincibility frames. HP bar and life count are displayed in the UI.
-- **Save & Load** — Save and load game progress (position, score, lives, and settings) using JSON files.
-- **Sound & Music Toggle** — Persistent audio settings saved to a config file, with on-screen mute/unmute buttons.
-- **Score System** — Collect coins or defeat enemies to increase your score; UI updates in real time through the game manager.
-- **Demo Levels** — Two hand-crafted levels that introduce platformer design patterns and progressively challenge the player.
-- **Level Management** — Clean scene transitions between levels using an autoload transition manager.
-- **Beginner-Friendly Code** — Every script is documented and structured to be easy to read, modify, and extend.
+- **2D Side-Scrolling Action** — Explore a medieval fantasy world through side-scrolling levels.
+- **Sword Combat System** — Attack enemies using a three-hit combo system.
+- **Running Attack** — Perform attacks while moving to create more dynamic combat.
+- **Block System** — Defend against enemy attacks by blocking at the right time.
+- **Stamina System** — Running and blocking consume stamina, requiring players to manage their stamina during combat.
+- **Enemy AI** — Enemies can detect, chase, attack, defend, and react to player attacks.
+- **Enemy Blocking** — Enemies can block player attacks based on their defensive behavior.
+- **Enemy Health System** — Enemies have HP bars displayed above their heads.
+- **Knockback & Hurt System** — Characters react to attacks with damage, stun, and knockback effects.
+- **Combat Music** — Background music changes when entering and leaving combat.
+- **Sound Effects** — Includes walking, running, attacking, blocking, taking damage, and other gameplay sounds.
+- **Dialogue System** — Characters can interact with the player and display story dialogue with character portraits.
+- **Story Progression** — Dialogue and missions are used to progress the game's story.
+- **Mission System** — Complete objectives to advance through the game.
+- **Scene Transition** — Smooth fade transitions are used when moving between levels.
+- **Save & Load** — Save game progress and important gameplay information.
+- **Game State Management** — A central GameManager manages player HP, lives, missions, levels, and save data.
+- **Audio Management** — AudioManager controls background music, combat music, sound effects, and audio settings.
+- **Medieval Fantasy World** — Explore different environments including villages, forests, cities, and castles.
+- **Multiple Levels** — Progress through different areas as the story develops.
 
-## Getting Started
+## Story
 
-1. Open the project in [Godot 4.7](https://godotengine.org/) or later.
-2. Press **F5** or click **Play** to run the main menu.
-3. Use **A/D** or **Left/Right** to move, **Space** to jump, and **X** to shoot.
-4. On mobile or web, use the on-screen buttons at the bottom of the screen.
-5. Collect coins, defeat enemies, avoid traps, and reach the door to finish each level.
+The protagonist lives with his father in a quiet rural village. Behind their peaceful life lies a forgotten past and a deep grudge connected to the kingdom.
 
-## Project Structure
+As the protagonist grows older, he begins to uncover the truth about his family's past. His journey eventually leads him from his home to the training grounds, forests, city, and royal castle.
 
-```
-Scenes/
-├── Actors/           # Player, enemies, and spawners
-├── Levels/           # Level scenes, base level template, and UI
-├── Managers/         # GameManager, SceneTransition, AudioManager
-└── Prefabs/          # Reusable objects (bullet, coin, potion, door, button)
+Along the way, he meets warriors, villagers, soldiers, and the king. The choices and events of the journey gradually reveal the truth behind the conflict and the reason for his father's past.
 
-Assets/
-├── Fonts/            # Custom fonts
-├── Icons/            # UI icons
-├── Sound/            # BGM and SFX
-├── Spritesheet/      # Character and tile sprites
-└── Textures/         # Particle and effect textures
-```
+## Levels
 
-## Controls
+The game consists of several areas:
 
-| Input | Action |
-|-------|--------|
-| A / Left Arrow | Move left |
-| D / Right Arrow | Move right |
-| Space / S | Jump |
-| X | Shoot |
-| On-screen buttons | Mobile and web touch controls |
+1. **Home of the Exile** — The protagonist's home.
+2. **Forgotten Village** — A rural village where the journey begins.
+3. **The Training Grounds** — A training area where the protagonist learns combat.
+4. **Forest of Shadows** — A dangerous forest filled with enemies.
+5. **The Deep Wilds** — A deeper and more dangerous part of the forest.
+6. **The Fallen City** — A city affected by conflict.
+7. **The Royal Castle** — The castle of the kingdom.
+8. **The Throne Room** — The final area where the story reaches its conclusion.
 
-## Inspector Tips
+## Combat System
 
-- **Player**: Toggle `double_jump` to enable double jump. Adjust `move_speed`, `jump_force`, `shoot_cooldown_time`, and `bullet_lifetime` directly in the inspector.
-- **Enemy Spawner**: Configure `enemy_scenes`, `speed_range`, `respawn_time`, and `max_instance` to control enemy behavior and density.
-- **Bullet**: Adjust `speed` and `lifetime` to change projectile feel.
+### Player
 
-## Saving
+The player can:
 
-- Press the **Save** button in the top-right corner to save your progress.
-- The game saves the player's position, score, lives, and audio settings.
+- Walk
+- Run
+- Attack
+- Perform attack combos
+- Perform running attacks
+- Block enemy attacks
+- Manage stamina
+- Take damage
+- Receive knockback
+- Recover from attacks
+- Die and restart
 
-## Credits
+### Attack Combo
 
-**Original Developer**
-- [AdilDevStuff](https://github.com/AdilDevStuff) — [2D-Platformer-Starter-Kit](https://github.com/AdilDevStuff/2D-Platformer-Starter-Kit)
+The player's basic attack consists of three attacks:
 
-**2D Assets**
-- [Kenney.nl](https://www.kenney.nl/)
-- [craftpix.net](https://craftpix.net/)
-- [Ravenmore](https://ravenmore.itch.io/)
-- [Icons8.com](https://icons8.com)
-
-**Sound Effects**
-- GDFXR (Sfxr plugin for Godot)
-
-**Modified for Educational Use By**
-- College of Computing, Khon Kaen University
+```text
+Attack 1
+   ↓
+Attack 2
+   ↓
+Attack 3
