@@ -217,6 +217,9 @@ func combat() -> void:
 
 func attack() -> void:
 
+	if is_dead:
+		return
+
 	if is_attacking:
 		return
 
@@ -233,18 +236,21 @@ func attack() -> void:
 	# ATTACK 1
 	# =========================
 
-	sprite.play("Attack_1")
-
 	if is_dead:
 		return
 
-	if is_hurt:
-		is_attacking = false
-		can_attack = true
-		return
+	sprite.play("Attack_1")
 
 	check_attack_hit()
+
 	await get_tree().create_timer(0.7).timeout
+
+	# =========================
+	# CHECK DEAD
+	# =========================
+
+	if is_dead:
+		return
 
 	# =========================
 	# ATTACK 2
@@ -252,39 +258,38 @@ func attack() -> void:
 
 	sprite.play("Attack_2")
 
+	check_attack_hit()
+
+	await get_tree().create_timer(0.7).timeout
+
+	# =========================
+	# CHECK DEAD
+	# =========================
+
 	if is_dead:
 		return
+	# =========================
+	# ATTACK 1
+	# =========================
 
-	if is_hurt:
-		is_attacking = false
-		can_attack = true
+	if is_dead:
 		return
-
-	check_attack_hit()
-	await get_tree().create_timer(0.7).timeout
-	# =========================
-	# ATTACK 3
-	# =========================
 
 	sprite.play("Attack_3")
 
-	if is_dead:
-		return
-
-	if is_hurt:
-		is_attacking = false
-		can_attack = true
-		return
-
 	check_attack_hit()
-	await get_tree().create_timer(0.8).timeout
+
+	await get_tree().create_timer(0.7).timeout
 
 	# =========================
-	# IDLE
+	# END ATTACK
 	# =========================
 
 	is_attacking = false
 	state = State.IDLE
+
+	if is_dead:
+		return
 
 	sprite.play("Idle")
 
@@ -294,11 +299,6 @@ func attack() -> void:
 		return
 
 	can_attack = true
-
-
-# =========================
-# ATTACK HIT
-# =========================
 
 func check_attack_hit() -> void:
 
@@ -335,8 +335,6 @@ func check_attack_hit() -> void:
 				body.take_damage(attack_damage)
 
 			return
-
-
 # =========================
 # TAKE DAMAGE
 # =========================
@@ -569,14 +567,20 @@ func die() -> void:
 	# PLAY DEAD
 	# =========================
 
-	# ป้องกัน Dead เป็น Loop
 	if sprite.sprite_frames.has_animation("Dead"):
 		sprite.sprite_frames.set_animation_loop("Dead", false)
 
+	# หยุด Attack ที่กำลังเล่นอยู่
 	sprite.stop()
+
+	# เริ่ม Dead ตั้งแต่เฟรมแรก
+	sprite.frame = 0
 	sprite.play("Dead")
 
-	# หยุด Physics ของ Enemy
+	# =========================
+	# STOP PHYSICS
+	# =========================
+
 	set_physics_process(false)
 
 

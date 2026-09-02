@@ -69,7 +69,6 @@ var is_dead: bool = false
 @onready var detection_area: Area2D = $BodyVisual/DetectionArea
 @onready var body_visual: Node2D = $BodyVisual
 @onready var health_bar: ProgressBar = $HealthBar
-@onready var block_sfx: AudioStreamPlayer2D = $BlockSfx
 
 var is_block_stunned: bool = false
 
@@ -218,6 +217,9 @@ func combat() -> void:
 
 func attack() -> void:
 
+	if is_dead:
+		return
+
 	if is_attacking:
 		return
 
@@ -234,18 +236,21 @@ func attack() -> void:
 	# ATTACK 1
 	# =========================
 
-	sprite.play("Attack_1")
-
 	if is_dead:
 		return
 
-	if is_hurt:
-		is_attacking = false
-		can_attack = true
-		return
+	sprite.play("Attack_1")
 
 	check_attack_hit()
+
 	await get_tree().create_timer(0.4).timeout
+
+	# =========================
+	# CHECK DEAD
+	# =========================
+
+	if is_dead:
+		return
 
 	# =========================
 	# ATTACK 2
@@ -253,23 +258,26 @@ func attack() -> void:
 
 	sprite.play("Attack_2")
 
-	if is_dead:
-		return
-
-	if is_hurt:
-		is_attacking = false
-		can_attack = true
-		return
-
 	check_attack_hit()
+
 	await get_tree().create_timer(0.4).timeout
 
 	# =========================
-	# IDLE
+	# CHECK DEAD
+	# =========================
+
+	if is_dead:
+		return
+
+	# =========================
+	# END ATTACK
 	# =========================
 
 	is_attacking = false
 	state = State.IDLE
+
+	if is_dead:
+		return
 
 	sprite.play("Idle")
 
@@ -279,7 +287,6 @@ func attack() -> void:
 		return
 
 	can_attack = true
-
 
 # =========================
 # ATTACK HIT
@@ -307,7 +314,6 @@ func check_attack_hit() -> void:
 				print("PLAYER BLOCKED ENEMY ATTACK")
 			
 				block_stun()
-				block_sfx.play()
 				return
 
 
@@ -520,7 +526,7 @@ func die() -> void:
 	is_dead = true
 	state = State.DEAD
 
-	# ปิดทุกสถานะการต่อสู้
+	# ปิดทุกสถานะ
 	is_attacking = false
 	is_defending = false
 	is_hurt = false
@@ -535,33 +541,26 @@ func die() -> void:
 	# DISABLE COLLISION
 	# =========================
 
-	$CollisionShape2D.set_deferred(
-		"disabled",
-		true
-	)
+	$CollisionShape2D.set_deferred("disabled", true)
 
-	attack_area.set_deferred(
-		"monitoring",
-		false
-	)
-
-	detection_area.set_deferred(
-		"monitoring",
-		false
-	)
+	attack_area.set_deferred("monitoring", false)
+	detection_area.set_deferred("monitoring", false)
 
 	# =========================
 	# PLAY DEAD
 	# =========================
 
-	# ป้องกัน Dead เป็น Loop
 	if sprite.sprite_frames.has_animation("Dead"):
 		sprite.sprite_frames.set_animation_loop("Dead", false)
 
 	sprite.stop()
+	sprite.frame = 0
 	sprite.play("Dead")
 
-	# หยุด Physics ของ Enemy
+	# =========================
+	# STOP PHYSICS
+	# =========================
+
 	set_physics_process(false)
 
 
@@ -592,7 +591,5 @@ func flip_enemy(direction: float) -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 
 	if is_dead and sprite.animation == "Dead":
-
 		queue_free()
-
 		return

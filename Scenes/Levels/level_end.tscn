@@ -292,6 +292,9 @@ position = Vector2(-691.00006, 427)
 [node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("3_n5jy4")]
 limit_right = 870
 
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
+text = "The Exile's Home"
+
 [node name="Tilee" type="Sprite2D" parent="." index="8" unique_id=658583738]
 texture_filter = 2
 position = Vector2(0, 488)

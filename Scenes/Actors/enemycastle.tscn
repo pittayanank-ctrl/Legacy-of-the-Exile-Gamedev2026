@@ -473,4 +473,22 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_pada5")
 value = 100.0
 show_percentage = false
 
+[node name="Control" type="Control" parent="." unique_id=1353517824]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 28.5
+scale = Vector2(0.27464718, 0.39495605)
+
+[node name="Label" type="Label" parent="Control" unique_id=1439221126]
+layout_mode = 0
+offset_left = -77.0
+offset_top = -34.5
+offset_right = 79.0
+offset_bottom = -12.5
+theme_override_font_sizes/font_size = 16
+text = "Exiled Warrior"
+horizontal_alignment = 1
+
 [connection signal="animation_finished" from="BodyVisual/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
