@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ckcnjonvqso6s" path="res://Assets/BG/nature_4/3.png" id="6_233yf"]
 [ext_resource type="Texture2D" uid="uid://cdrlwb830yf0l" path="res://Assets/BG/nature_4/4.png" id="7_mgt3e"]
 [ext_resource type="PackedScene" uid="uid://dhvmfd7ogyqld" path="res://Scenes/Actors/NPC.tscn" id="8_t58jk"]
-[ext_resource type="Texture2D" uid="uid://syri776v2etj" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="9_ue85e"]
+[ext_resource type="Texture2D" uid="uid://lc7j3q0snxct" path="res://Assets/NPC/GandalfHardcore Warrior.png" id="9_ue85e"]
 [ext_resource type="Script" uid="uid://dgimd832oimtc" path="res://Scenes/Prefabs/DialogueGroup.gd" id="10_l16xf"]
 [ext_resource type="Script" uid="uid://cdhi2dfrqh1wr" path="res://Scenes/Prefabs/DialogueLine.gd" id="11_xmwul"]
 [ext_resource type="Texture2D" uid="uid://dx2r3mf23no60" path="res://Assets/Player/heropic.psd.png" id="12_lxurl"]
@@ -319,7 +319,7 @@ autoplay = "default"
 
 [node name="Player" parent="." index="2" unique_id=850213228]
 z_index = 5
-position = Vector2(823.9998, 424.00003)
+position = Vector2(575.99994, 424.00003)
 
 [node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("16_5doyu")]
 limit_right = 870
