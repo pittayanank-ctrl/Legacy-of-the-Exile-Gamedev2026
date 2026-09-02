@@ -185,6 +185,9 @@ position = Vector2(-39, 542)
 rotation = 0.0004265296
 scale = Vector2(1.9316134, 1.7915316)
 
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
+text = "The Training Grounds"
+
 [node name="Text" parent="." index="6" unique_id=416249055]
 position = Vector2(-7, -79)
 

@@ -467,6 +467,9 @@ position = Vector2(-720.00006, 425)
 [node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("15_8g3x6")]
 limit_right = 1267
 
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
+text = "Forgotten Village"
+
 [node name="Ee35Bfb10Eef4b0e863c21Fbafa4e4Ff" type="Sprite2D" parent="." index="8" unique_id=667837342]
 position = Vector2(193, 210)
 scale = Vector2(1, 0.7776243)

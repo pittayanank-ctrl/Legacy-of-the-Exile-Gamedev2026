@@ -231,6 +231,9 @@ position = Vector2(-678.00006, 425.00003)
 [node name="GameCamera" parent="Player" index="5" unique_id=2097110056 instance=ExtResource("18_xv4d7")]
 limit_right = 870
 
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
+text = "The Exile's Home"
+
 [node name="ColorRect" type="ColorRect" parent="." index="8" unique_id=2018387552]
 offset_left = -928.0
 offset_top = 544.0

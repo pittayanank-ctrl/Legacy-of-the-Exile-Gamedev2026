@@ -154,3 +154,6 @@ detection_distance = 150.0
 position = Vector2(1098, 467.00003)
 scale = Vector2(3, 3)
 detection_distance = 450.0
+
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
+text = "Kingdom's City"

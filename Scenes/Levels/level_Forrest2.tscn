@@ -186,5 +186,5 @@ offset_bottom = 39.5
 theme_override_colors/font_color = Color(0.5529412, 0.38431373, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-text = "Level 1"
+text = "Whispering Woods"
 horizontal_alignment = 1
